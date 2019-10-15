@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-15T06:20:21.182Z">
+<meta property="og:updated_time" content="2019-10-15T06:34:19.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令总结">
 <meta name="twitter:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
@@ -196,7 +196,7 @@
 <p>11 5步添加之前想撤销所有提交：<strong>git checkout .</strong></p>
 <p>12 5步添加之后想要撤销提交：<strong>git reset .</strong></p>
 <p>13 6步commit之后想撤回：<strong>先 git reset HEAD~1</strong> 然后 强推到远端 <strong>git push origin feature/example –force</strong></p>
-<p>14 merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：** git log或者git reflog<strong>, 最后 **git reset –mixed 版本号</strong></p>
+<p>14 merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：<strong>git log或者git reflog</strong>, 最后 <strong>git reset –mixed 版本号</strong></p>
 </li>
 <li><p><strong>其他</strong></p>
 <p>查看所有分支：<strong>git branch -a</strong></p>
@@ -435,11 +435,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
             
             <div class="clearfix"></div>
