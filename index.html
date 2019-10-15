@@ -156,6 +156,214 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/15/git常用命令/">git常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/15/git常用命令/" class="archive-article-date">
+  	<time datetime="2019-10-15T02:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git常用命令总结"><a href="#git常用命令总结" class="headerlink" title="git常用命令总结"></a>git常用命令总结</h2><ul>
+<li><strong>提交代码流程</strong><br>
+1 从 master 分支开出新分支 feature/example： **git checkout -b feature/example**
+2 将此feature分支推送到远端： **git push --set-upstream origin feature/example**
+3 查看此分支git状态：**git status**
+4 查看分支改动的详细代码：**git diff**
+5 将改动文件从工作区添加到暂存区：**git add .**
+6 将改动文件从暂存区提交到当前分支：**git commit -m 'xxx'**
+7 5和6两步可以合写为： **git commit -am 'xxx'**
+8 将分支改动推送到远端：**git push**
+9 将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 -- **git diff feature/example**( *审查代码 防止出错* ) 再合并：**git merge feature/example** 最后再 **git push** 推送到远端
+10 分支发到预发或线上环境同上
+<br></li>
+<li><strong>撤回相关</strong><br>
+11 5步添加之前想撤销所有提交：**git checkout .**
+12 5步添加之后想要撤销提交：**git reset .**
+13 6步commit之后想撤回：**先 git reset HEAD~1** 然后 强推到远端 **git push origin feature/example --force**
+14 merge到dev分支之后想撤回合并：先切到dev分支：**git checkout develop**, 查处要回退的版本号：** git log或者git reflog**, 最后 **git reset --mixed 版本号**
+<br></li>
+<li><strong>其他</strong><br>
+查看所有分支：**git branch -a**
+删除远程分支：**git branch -r -d origin/feature/example**
+            **git push origin:feature/example**
+
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/15/git常用命令/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ts-基本语法的整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+## 基本类型
+Time is money
+假如以时间为计量单位
+你有没有达到1分钟z1元
+1y,大部分人都不放在眼里
+但是按照一分钟1y
+一天24*60 = 1440分钟
+也就是一天1440y
+每月就有 1440*30 = 43200y
+
+按照全国只有百分之1.1%比率月入过万入群来看
+达到这个收入的人群也应该极少
+大多数人应该连想都没想过
+不过国外已经有人实现了
+
+比如百万美元主页 http://www.milliondollarhomepage.com/
+2005年一个21岁的英国大学生创建的网站
+网站网格拆分为100万个像素
+每个像素售价1美元
+买下像素广告位就可以永久留下广告
+这个网站也实现了一个小目标
+把所有的像素出售出去了
+总收益百万美元
+按照程序员的角度来看几乎0成本
+没有后台逻辑没有数据库
+只有前端页面展示，域名服务器
+
+
+比如Pat Flynn
+SmartPassiveIncome（智能被动收入）的创始人
+把美国的一个考试LEED的知识点总结
+做成电子书
+放在网站售卖靠这本书
+Pat一年之内入账20万美金
+同时他自己的网站
+因为合作google广告联盟
+也赚了不少广告费
+具体可百度他相关案例
+
+
+国内也不乏此类案例
+李笑来三十岁的时候就在研究被动收入
+他出版的书-把时间当朋友等畅销书
+出版费已经赚了一波
+直到入了币圈
+更是实现了财务自由
+
+
+以上说的大部分都和网络有关
+也属实因为其成本小周期短
+类似的还有
+无货源店群 fiverr私活
+niche站点  币圈搬砖挖矿
+虚拟资源店铺  知识付费
+淘宝客 等等等等
+
+点到为止
+因为本人也只是研究学习阶段
+离财务自由还差很多步
+有可能仅仅是open your mind
+有类似想法的可以相互交流
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/17/Ts-基本语法的整理/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-plum静电容键盘66键说明书" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
