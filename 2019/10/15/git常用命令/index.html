@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>git常用命令 | yunxi的博客</title>
+  <title>git常用命令总结 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git常用命令总结 提交代码流程 1 从 master 分支开出新分支 feature/example：  **git checkout -b feature/example** 2 将此feature分支推送到远端： **git push --set-upstream origin feature/example** 3 查看此分支git状态：**git status** 4 查看分支改动的详细">
-<meta name="keywords" content="其他">
+  <meta name="description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
+<meta name="keywords" content="git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
+<meta property="og:title" content="git常用命令总结">
 <meta property="og:url" content="http://yunxii.cn/2019/10/15/git常用命令/index.html">
 <meta property="og:site_name" content="yunxi的博客">
-<meta property="og:description" content="git常用命令总结 提交代码流程 1 从 master 分支开出新分支 feature/example：  **git checkout -b feature/example** 2 将此feature分支推送到远端： **git push --set-upstream origin feature/example** 3 查看此分支git状态：**git status** 4 查看分支改动的详细">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-15T05:42:18.121Z">
+<meta property="og:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-15T06:20:21.182Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="git常用命令总结 提交代码流程 1 从 master 分支开出新分支 feature/example：  **git checkout -b feature/example** 2 将此feature分支推送到远端： **git push --set-upstream origin feature/example** 3 查看此分支git状态：**git status** 4 查看分支改动的详细">
+<meta name="twitter:title" content="git常用命令总结">
+<meta name="twitter:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -48,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1565343806795&amp;di=d36c8fbf65902b4e07ba999819f56404&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180113%2F84f020f38d05488e8ada2cd5ac0e34a9.jpeg" class="js-avatar">
+			<img src="http://b-ssl.duitang.com/uploads/item/201607/24/20160724002437_JaZG4.jpeg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">circe</a></h1>
@@ -108,7 +108,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1565343806795&amp;di=d36c8fbf65902b4e07ba999819f56404&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180113%2F84f020f38d05488e8ada2cd5ac0e34a9.jpeg" class="js-avatar">
+				<img src="http://b-ssl.duitang.com/uploads/item/201607/24/20160724002437_JaZG4.jpeg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">circe</h1>
@@ -166,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      git常用命令
+      git常用命令总结
     </h1>
   
 
@@ -179,31 +179,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="git常用命令总结"><a href="#git常用命令总结" class="headerlink" title="git常用命令总结"></a>git常用命令总结</h2><ul>
-<li><strong>提交代码流程</strong><br>
-1 从 master 分支开出新分支 feature/example： 
-**git checkout -b feature/example**
-2 将此feature分支推送到远端： **git push --set-upstream origin feature/example**
-3 查看此分支git状态：**git status**
-4 查看分支改动的详细代码：**git diff**
-5 将改动文件从工作区添加到暂存区：**git add .**
-6 将改动文件从暂存区提交到当前分支：**git commit -m 'xxx'**
-7 5和6两步可以合写为： **git commit -am 'xxx'**
-8 将分支改动推送到远端：**git push**
-9 将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 -- **git diff feature/example**( *审查代码 防止出错* ) 再合并：**git merge feature/example** 最后再 **git push** 推送到远端
-10 分支发到预发或线上环境同上
-<br></li>
-<li><strong>撤回相关</strong><br>
-11 5步添加之前想撤销所有提交：**git checkout .**
-12 5步添加之后想要撤销提交：**git reset .**
-13 6步commit之后想撤回：**先 git reset HEAD~1** 然后 强推到远端 **git push origin feature/example --force**
-14 merge到dev分支之后想撤回合并：先切到dev分支：**git checkout develop**, 查处要回退的版本号：** git log或者git reflog**, 最后 **git reset --mixed 版本号**
-<br></li>
-<li><strong>其他</strong><br>
-查看所有分支：**git branch -a**
-删除远程分支：**git branch -r -d origin/feature/example**
-            **git push origin:feature/example**
-
+        <ul>
+<li><p><strong>提交代码流程</strong></p>
+<p>1 从 master 分支开出新分支 feature/example：<strong>git checkout -b feature/example</strong></p>
+<p>2 将此feature分支推送到远端： <strong>git push –set-upstream origin feature/example</strong></p>
+<p>3 查看此分支git状态：<strong>git status</strong></p>
+<p>4 查看分支改动的详细代码：<strong>git diff</strong></p>
+<p>5 将改动文件从工作区添加到暂存区：<strong>git add .</strong></p>
+<p>6 将改动文件从暂存区提交到当前分支：<strong>git commit -m ‘xxx’</strong></p>
+<p>7 5和6两步可以合写为： <strong>git commit -am ‘xxx’</strong></p>
+<p>8 将分支改动推送到远端：<strong>git push</strong></p>
+<p>9 将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 – <strong>git diff feature/example</strong>( <em>审查代码 防止出错</em> ) 再合并：<strong>git merge feature/example</strong> 最后再 <strong>git push</strong> 推送到远端</p>
+<p>10 分支发到预发或线上环境同上</p>
+</li>
+<li><p><strong>撤回相关</strong></p>
+<p>11 5步添加之前想撤销所有提交：<strong>git checkout .</strong></p>
+<p>12 5步添加之后想要撤销提交：<strong>git reset .</strong></p>
+<p>13 6步commit之后想撤回：<strong>先 git reset HEAD~1</strong> 然后 强推到远端 <strong>git push origin feature/example –force</strong></p>
+<p>14 merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：** git log或者git reflog<strong>, 最后 **git reset –mixed 版本号</strong></p>
+</li>
+<li><p><strong>其他</strong></p>
+<p>查看所有分支：<strong>git branch -a</strong></p>
+<p>删除远程分支：<br><strong>git branch -r -d origin/feature/example</strong><br><strong>git push origin:feature/example</strong></p>
 </li>
 </ul>
 
@@ -240,7 +237,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
@@ -311,8 +308,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/09/17/Ts-基本语法的整理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2019/08/12/plum静电容键盘66键说明书/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">plum静电容键盘66键说明书</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -440,6 +437,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -509,7 +510,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">circe&lt;br&gt;&lt;br&gt;--云熙-一名2yrs 前端er&lt;br&gt;专注前端</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">circe&lt;br&gt;--一名前端er&lt;br&gt;</div>
   	  	
     	</section>
     
