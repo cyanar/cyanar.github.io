@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yunxii.cn">
   <title>keynote代码高亮(亲测可用) | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight  第三步进入你想复制代码的">
+  <meta name="description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight">
 <meta name="keywords" content="其他">
 <meta property="og:type" content="article">
 <meta property="og:title" content="keynote代码高亮(亲测可用)">
 <meta property="og:url" content="http://yunxii.cn/2019/10/29/keynote代码高亮/index.html">
 <meta property="og:site_name" content="yunxi的博客">
-<meta property="og:description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight  第三步进入你想复制代码的">
+<meta property="og:description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://tva1.sinaimg.cn/large/007X8olVly1g8f4o5u08bj31240m2wj1.jpg">
-<meta property="og:updated_time" content="2019-10-29T10:16:59.782Z">
+<meta property="og:updated_time" content="2019-10-29T10:19:18.911Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="keynote代码高亮(亲测可用)">
-<meta name="twitter:description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight  第三步进入你想复制代码的">
+<meta name="twitter:description" content="想在keynote里添加代码最直接的方式是 直接截图 把截图图片粘贴到页面里然而 这样想要把图片放大 代码就会模糊看不清 而且页面也很丑 查了百度几个帖子试了n多种方法最后亲测一个 最好用的keynote代码高亮方法 第一步在mac上安装 homebrew ,已经安装过的可以忽略 第二步安装 highlight命令行输入  1brew install highlight">
 <meta name="twitter:image" content="http://tva1.sinaimg.cn/large/007X8olVly1g8f4o5u08bj31240m2wj1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
@@ -186,6 +186,8 @@
 <h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>在mac上安装 homebrew ,已经安装过的可以忽略</p>
 <h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>安装 highlight<br>命令行输入 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install highlight</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>进入你想复制代码的文件夹目录<br>然后输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight --style moria  -k <span class="string">"Fira Code"</span> --font Inconsolata  -K 18 -u <span class="string">"utf-8"</span> -t 4 -O rtf testts.ts | pbcopy</span><br></pre></td></tr></table></figure>
