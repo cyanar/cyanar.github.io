@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 实现功能点击‘下载’按钮，直接能下载图片 问题描述1&amp;lt;a href=&quot;https://file.cxiaozhi.com/wlop.jpg&quot; download=&quot;avatar.jpg&quot;&amp;gt;下载&amp;lt;/a&amp;gt;  按照上面这么写，没有下载图片，而是打开了图片的链接🐶">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-04-20T05:41:20.814Z">
+<meta property="og:updated_time" content="2020-04-20T05:43:49.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="h5页面a链接下载图片">
 <meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 实现功能点击‘下载’按钮，直接能下载图片 问题描述1&amp;lt;a href=&quot;https://file.cxiaozhi.com/wlop.jpg&quot; download=&quot;avatar.jpg&quot;&amp;gt;下载&amp;lt;/a&amp;gt;  按照上面这么写，没有下载图片，而是打开了图片的链接🐶">
@@ -187,10 +187,10 @@
 <a id="more"></a>
 
 <h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>图片放在本地，先引入图片：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> codeIMG <span class="keyword">from</span> <span class="string">'@/assets/code.jpg'</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> avatarIMG <span class="keyword">from</span> <span class="string">'@/assets/avatar.jpg'</span>;</span><br></pre></td></tr></table></figure>
 
 <p>然后在vue里这么写：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"codeIMG"</span> <span class="attr">download</span>=<span class="string">"avatar.jpg"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"avatarIMG"</span> <span class="attr">download</span>=<span class="string">"avatar.jpg"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -446,10 +446,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -459,6 +455,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">keynote</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
