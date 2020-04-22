@@ -176,7 +176,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用updated生命周期，<br>mounted有的时候获取不到该dom的属性，就要使用setTimeout，</p>
+        <p>1.vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用<b>updated</b>生命周期，<br>mounted有的时候获取不到该dom的属性，就要使用setTimeout，</p>
 <p>最好的办法是在updated中直接获取dom的属性。</p>
 <p>原因是：dom动态属性是在页面动态属性挂载完成才赋值的，mounted是在dom节点挂载完执行的，这时候动态属性并没有赋值。而在赋值的一瞬间 updated生命周期就监听到了。</p>
 <p>2.发送接口请求应该在created生命周期中执行，这样比较快也不会出问题</p>
@@ -1017,11 +1017,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
               </li>
              
               <li class="article-tag-list-item">
