@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>亲测常用vscode命令（mac） | yunxi的博客</title>
+  <title>vue获取页面元素 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础编辑    快捷键 作用    command+x 剪切   command+c 复制   command+shift+k 删除当前行   command+enter 在当前行之后插入一行   command+shift+Enter 在当前行之前插入一行   Alt+Up/Down 移动当前行上下   Shift+Alt+Up/Down 在当前行上下复制当前行   Command+Up/Do">
-<meta name="keywords" content="其他">
+  <meta name="description" content="vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用updated生命周期，mounted有的时候获取不到该dom的属性，就要使用setTimeout， 最好的办法是在updated中直接获取dom的属性。 原因是：dom动态属性是在页面动态属性挂载完成才赋值的，mounted是在dom节点挂载完执行的，这时候动态属性并没有赋值。而在赋值的一瞬间 updated生命周期就监听到了。 2.">
+<meta name="keywords" content="日常问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="亲测常用vscode命令（mac）">
-<meta property="og:url" content="http://yunxii.cn/2020/04/19/亲测常用vscode命令/index.html">
+<meta property="og:title" content="vue获取页面元素">
+<meta property="og:url" content="http://yunxii.cn/2020/04/22/vue获取页面元素/index.html">
 <meta property="og:site_name" content="yunxi的博客">
-<meta property="og:description" content="基础编辑    快捷键 作用    command+x 剪切   command+c 复制   command+shift+k 删除当前行   command+enter 在当前行之后插入一行   command+shift+Enter 在当前行之前插入一行   Alt+Up/Down 移动当前行上下   Shift+Alt+Up/Down 在当前行上下复制当前行   Command+Up/Do">
+<meta property="og:description" content="vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用updated生命周期，mounted有的时候获取不到该dom的属性，就要使用setTimeout， 最好的办法是在updated中直接获取dom的属性。 原因是：dom动态属性是在页面动态属性挂载完成才赋值的，mounted是在dom节点挂载完执行的，这时候动态属性并没有赋值。而在赋值的一瞬间 updated生命周期就监听到了。 2.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-04-20T03:37:07.736Z">
+<meta property="og:updated_time" content="2020-04-22T09:52:03.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="亲测常用vscode命令（mac）">
-<meta name="twitter:description" content="基础编辑    快捷键 作用    command+x 剪切   command+c 复制   command+shift+k 删除当前行   command+enter 在当前行之后插入一行   command+shift+Enter 在当前行之前插入一行   Alt+Up/Down 移动当前行上下   Shift+Alt+Up/Down 在当前行上下复制当前行   Command+Up/Do">
+<meta name="twitter:title" content="vue获取页面元素">
+<meta name="twitter:description" content="vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用updated生命周期，mounted有的时候获取不到该dom的属性，就要使用setTimeout， 最好的办法是在updated中直接获取dom的属性。 原因是：dom动态属性是在页面动态属性挂载完成才赋值的，mounted是在dom节点挂载完执行的，这时候动态属性并没有赋值。而在赋值的一瞬间 updated生命周期就监听到了。 2.">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -159,164 +159,30 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-亲测常用vscode命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue获取页面元素" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      亲测常用vscode命令（mac）
+      vue获取页面元素
     </h1>
   
 
         
-        <a href="/2020/04/19/亲测常用vscode命令/" class="archive-article-date">
-  	<time datetime="2020-04-19T02:25:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
+        <a href="/2020/04/22/vue获取页面元素/" class="archive-article-date">
+  	<time datetime="2020-04-22T09:51:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p><strong>基础编辑</strong></p>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><font color="Hotpink">command+x</font></td>
-<td>剪切</td>
-</tr>
-<tr>
-<td><font color="Hotpink">command+c</font></td>
-<td>复制</td>
-</tr>
-<tr>
-<td><font color="Hotpink">command+shift+k</font></td>
-<td>删除当前行</td>
-</tr>
-<tr>
-<td><font color="Hotpink">command+enter</font></td>
-<td>在当前行之后插入一行</td>
-</tr>
-<tr>
-<td><font color="Hotpink">command+shift+Enter</font></td>
-<td>在当前行之前插入一行</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Alt+Up/Down</font></td>
-<td>移动当前行上下</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Shift+Alt+Up/Down</font></td>
-<td>在当前行上下复制当前行</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+Up/Down</font></td>
-<td>行视图上下偏移</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+/</font></td>
-<td>添加关闭行注释</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Alt+Z</font></td>
-<td>添加关闭自动换行</td>
-</tr>
-</tbody></table>
-<a id="more"></a></li>
-<li><p><strong>导航&amp;&amp;窗口</strong></p>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><font color="Hotpink">Command+t</font></td>
-<td>启动符号搜索框</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Ctrl+G</font></td>
-<td>跳转行</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+P</font></td>
-<td>启动文件搜索框，方便快速打开文件</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+f</font></td>
-<td>在当前文件查询</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+Shift+N</font></td>
-<td>打开新的vscode窗口</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong>文件管理</strong></p>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><font color="Hotpink">Command+N</font></td>
-<td>新建文件</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+S</font></td>
-<td>保存文件</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+Shift+S</font></td>
-<td>另存为</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Ctrl+Tab</font></td>
-<td>调出最近打开的文件列表，重复按会切换到下一个</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Ctrl+Shift+Tab</font></td>
-<td>调出最近打开的文件列表，重复按会切换到上一个</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+K R </font></td>
-<td>打开当前编辑文件存放位置【文件管理器】</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+B</font></td>
-<td>切换侧边栏显示隐藏</td>
-</tr>
-<tr>
-<td><font color="Hotpink">Command+Shift+V</font></td>
-<td>Markdown预览切换</td>
-</tr>
-</tbody></table>
-</li>
-<li><p><strong>光标操作</strong></p>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><font color="Hotpink">Ctrl+I</font></td>
-<td>选中当前行</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
+        <p>vue 如果需要在DOM加载完成后获取DOM的动态属性，请使用updated生命周期，<br>mounted有的时候获取不到该dom的属性，就要使用setTimeout，</p>
+<p>最好的办法是在updated中直接获取dom的属性。</p>
+<p>原因是：dom动态属性是在页面动态属性挂载完成才赋值的，mounted是在dom节点挂载完执行的，这时候动态属性并没有赋值。而在赋值的一瞬间 updated生命周期就监听到了。</p>
+<p>2.发送接口请求应该在created生命周期中执行，这样比较快也不会出问题</p>
 
       
 
@@ -351,7 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
         		</li>
       		
 		</ul>
@@ -407,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2020/04/19/亲测常用vscode命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2020/04/22/vue获取页面元素/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -421,18 +287,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/20/h5页面a链接下载图片/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          h5页面a链接下载图片
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/16/很多could-not-freeze/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">很多could not freeze</div>
+    <a href="/2020/04/20/h5页面a链接下载图片/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">h5页面a链接下载图片</div>
       <i class="icon-circle-right"></i>
     </a>
   
