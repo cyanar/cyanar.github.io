@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/29/J78zlQ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/04/29/J7G61g.png">
-<meta property="og:updated_time" content="2020-04-29T10:02:24.345Z">
+<meta property="og:updated_time" content="2020-05-06T08:10:08.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用stylelint校验vue css代码">
 <meta name="twitter:description" content="遇到问题公司脚手架工程里使用stylelint来校验css代码，css格式出现错误会有报错： 问题来了：我想要在vscode当前文件保存的时候就自动修复这些css问题">
@@ -192,7 +192,9 @@
 <h3 id="感想-amp-总结："><a href="#感想-amp-总结：" class="headerlink" title="感想&amp;总结："></a>感想&amp;总结：</h3><p>因为要解决这个问题，查了一堆关于eslint的资料。。。<br>刚开始以为是eslint的设置<br>查了资料发现vscode的eslint自动保存只能自动修复js:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"editor.codeActionsOnSave"</span>: &#123;</span><br><span class="line">   <span class="string">"source.fixAll"</span>: <span class="literal">true</span>,</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<p>而样式的大部分校验是stylelint做的<br>下载了vscode的stylelint的插件也没什么卵用 不能保存时自动修复css<br>最后的解决方法是在vue.config配置</p>
+<p>而样式的大部分校验是stylelint做的<br>下载了vscode的stylelint的插件也没什么卵用 不能保存时自动修复css<br>最后的解决方法是在vue.config配置<br>还有代码最好在提交的时候也校验下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"gitHooks"</span>: &#123;</span><br><span class="line">      <span class="string">"pre-commit"</span>: <span class="string">"lint-staged"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"lint-staged"</span>: &#123;</span><br><span class="line">      <span class="string">"*.js"</span>: [</span><br><span class="line">          <span class="string">"vue-cli-service lint"</span>,</span><br><span class="line">          <span class="string">"git add"</span></span><br><span class="line">      ],</span><br><span class="line">      <span class="string">"*.vue"</span>: [</span><br><span class="line">          <span class="string">"vue-cli-service lint"</span>,</span><br><span class="line">          <span class="string">"git add"</span></span><br><span class="line">      ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -453,11 +455,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -465,11 +467,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
               </li>
              
               <li class="article-tag-list-item">
