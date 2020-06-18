@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>h5页面a链接下载图片 | yunxi的博客</title>
+  <title>Archives: 2020/6 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 实现功能点击‘下载’按钮，直接能下载图片 问题描述1&amp;lt;a href=&quot;https://file.cxiaozhi.com/wlop.jpg&quot; download=&quot;avatar.jpg&quot;&amp;gt;下载&amp;lt;/a&amp;gt;  按照上面这么写，没有下载图片，而是打开了图片的链接🐶">
-<meta name="keywords" content="日常问题记录">
-<meta property="og:type" content="article">
-<meta property="og:title" content="h5页面a链接下载图片">
-<meta property="og:url" content="http://yunxii.cn/2020/04/20/h5页面a链接下载图片/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="yunxi的博客">
+<meta property="og:url" content="http://yunxii.cn/archives/2020/06/index.html">
 <meta property="og:site_name" content="yunxi的博客">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 实现功能点击‘下载’按钮，直接能下载图片 问题描述1&amp;lt;a href=&quot;https://file.cxiaozhi.com/wlop.jpg&quot; download=&quot;avatar.jpg&quot;&amp;gt;下载&amp;lt;/a&amp;gt;  按照上面这么写，没有下载图片，而是打开了图片的链接🐶">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-04-20T05:46:17.091Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="h5页面a链接下载图片">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp; 实现功能点击‘下载’按钮，直接能下载图片 问题描述1&amp;lt;a href=&quot;https://file.cxiaozhi.com/wlop.jpg&quot; download=&quot;avatar.jpg&quot;&amp;gt;下载&amp;lt;/a&amp;gt;  按照上面这么写，没有下载图片，而是打开了图片的链接🐶">
+<meta name="twitter:title" content="yunxi的博客">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -159,210 +154,64 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-h5页面a链接下载图片" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      h5页面a链接下载图片
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/06/18/重读VUE2-x官方文档/" class="archive-article-date">
+  	<time datetime="2020-06-18T06:13:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/06/18/重读VUE2-x官方文档/">重读VUE2.x官方文档</a>
     </h1>
   
 
-        
-        <a href="/2020/04/20/h5页面a链接下载图片/" class="archive-article-date">
-  	<time datetime="2020-04-20T03:30:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&nbsp;&nbsp;&nbsp;</p>
-<h3 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h3><p>点击‘下载’按钮，直接能下载图片</p>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://file.cxiaozhi.com/wlop.jpg"</span> <span class="attr">download</span>=<span class="string">"avatar.jpg"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>按照上面这么写，没有下载图片，而是打开了图片的链接🐶</p>
-<a id="more"></a>
-
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>图片放在本地，先引入图片：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> avatarIMG <span class="keyword">from</span> <span class="string">'@/assets/avatar.jpg'</span>;</span><br></pre></td></tr></table></figure>
-
-<p>然后在vue里这么写：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">:href</span>=<span class="string">"avatarIMG"</span> <span class="attr">download</span>=<span class="string">"avatar.jpg"</span>&gt;</span>下载<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">日常问题记录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端框架</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2020/04/20/h5页面a链接下载图片/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/04/22/vue获取页面元素/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue获取页面元素
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/04/19/亲测常用vscode命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">亲测常用vscode命令（mac）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    window.onload = function() {
-        new Valine({
-            el: '#vcomment',
-            notify: false,
-            verify: false,
-            app_id: "tP7CfK2IYFBRGgtlGqVy81eh-gzGzoHsz",
-            app_key: "FODEspx8aqfH2L9mjiyBxERA",
-            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
-            path: window.location.pathname,
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
     
-
-  
-
-  
-  
-
-  
-  
-  
-  
 
 
           </div>
@@ -385,8 +234,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
