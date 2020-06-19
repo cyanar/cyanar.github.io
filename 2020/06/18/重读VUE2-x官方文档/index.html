@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="想要再深入研究下vue的第一步应该是要了解vue的所有用法所以 我又重新看了下vue的官方文档：vue 2.x通过阅读官方文档又了解到了更多vue的用法还是有所收获的： 列举如下：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-18T08:50:27.018Z">
+<meta property="og:updated_time" content="2020-06-19T03:11:04.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重读VUE2.x官方文档">
 <meta name="twitter:description" content="想要再深入研究下vue的第一步应该是要了解vue的所有用法所以 我又重新看了下vue的官方文档：vue 2.x通过阅读官方文档又了解到了更多vue的用法还是有所收获的： 列举如下：">
@@ -187,11 +187,13 @@
 <li><strong>slot插槽的更多用法</strong>：作用域插槽能够让内容访问子组件里的数据，v-slot可简写为’#’号</li>
 <li><strong>keep-alive</strong>: 用于切换组件时缓存状态</li>
 <li>子组件可以通过$parent访问父组件实例</li>
-<li>由于 JavaScript 的限制，Vue 不能检测数组和对象的变化。但可以用computed来返回更新后的数组，极少数需要使用$forceUpdate</li>
+<li>由于 JavaScript 的限制，Vue 不能检测数组和对象的变化。对于对象无法检测添加或移除，这可以使用$set方法，对于数组不能检测用索引直接设置数组项以及修改数组的长度，可以使用$set或splice来解决，也可以用computed来返回更新后的数组，极少数情况需要使用$forceUpdate</li>
 <li>提供过渡动画类名：和<code>&lt;transition&gt;</code>标签配合使用</li>
 <li>render渲染函数的深入用法：可添加<code>attrs</code>属性, createElement用法，vNode唯一：所以使用工厂函数创建渲染相同段落</li>
-<li>开发vue插件步骤</li>
+<li>开发vue插件的步骤</li>
+<li>vue的安全措施：html模板内容转义等</li>
 </ul>
+<p><strong>最后，假如面试时候问我vue和其他框架的区别，可以直接借鉴官网文档了：</strong><a href="https://cn.vuejs.org/v2/guide/comparison.html" target="_blank" rel="noopener">vue对比其他框架</a></p>
 
       
 
@@ -452,7 +454,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,7 +462,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,7 +470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
