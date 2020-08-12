@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>Tag: git | yunxi的博客</title>
+  <title>react html2canvas生成pdf空白 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yunxi的博客">
-<meta property="og:url" content="http://yunxii.cn/tags/git/index.html">
+  <meta name="description" content="问题描述react工程使用html2canvas生成pdf页面，搬运了已经上线的vue版本生成pdf代码如下:">
+<meta name="keywords" content="日常问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react html2canvas生成pdf空白">
+<meta property="og:url" content="http://yunxii.cn/2020/08/12/react-html2canvas生成pdf空白/index.html">
 <meta property="og:site_name" content="yunxi的博客">
+<meta property="og:description" content="问题描述react工程使用html2canvas生成pdf页面，搬运了已经上线的vue版本生成pdf代码如下:">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://tva1.sinaimg.cn/middle/007S8ZIlly1gho2c7s2yrj310a0t0q5g.jpg">
+<meta property="og:updated_time" content="2020-08-12T07:38:24.328Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yunxi的博客">
+<meta name="twitter:title" content="react html2canvas生成pdf空白">
+<meta name="twitter:description" content="问题描述react工程使用html2canvas生成pdf页面，搬运了已经上线的vue版本生成pdf代码如下:">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/middle/007S8ZIlly1gho2c7s2yrj310a0t0q5g.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -154,60 +161,196 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-react-html2canvas生成pdf空白" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/15/git常用命令/" class="archive-article-date">
-  	<time datetime="2019-10-15T02:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/15/git常用命令/">git常用命令总结</a>
+    <h1 class="article-title" itemprop="name">
+      react html2canvas生成pdf空白
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/08/12/react-html2canvas生成pdf空白/" class="archive-article-date">
+  	<time datetime="2020-08-12T06:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>react工程使用html2canvas生成pdf页面，搬运了已经上线的vue版本生成pdf代码如下:</p>
+<a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.$getPdf = <span class="function"><span class="keyword">function</span> (<span class="params">id, title</span>) </span>&#123;</span><br><span class="line">          <span class="keyword">var</span> c = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</span><br><span class="line">          <span class="keyword">var</span> dom = <span class="built_in">document</span>.querySelector(<span class="string">`#<span class="subst">$&#123;id&#125;</span>`</span>);</span><br><span class="line">          <span class="keyword">var</span> opts = &#123;</span><br><span class="line">              scale: <span class="number">2</span>,</span><br><span class="line">              useCORS: <span class="literal">true</span>,</span><br><span class="line">              canvas: c,</span><br><span class="line">              logging: <span class="literal">true</span>,</span><br><span class="line">              width: dom.width,</span><br><span class="line">              height: dom.height</span><br><span class="line">          &#125;;</span><br><span class="line">          c.width = dom.width * <span class="number">2</span>;</span><br><span class="line">          c.height = dom.height * <span class="number">2</span>;</span><br><span class="line">          c.getContext(<span class="string">'2d'</span>).scale(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">          html2Canvas(dom, opts).then(<span class="function"><span class="keyword">function</span> (<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">              <span class="keyword">let</span> contentWidth = canvas.width;</span><br><span class="line">              <span class="keyword">let</span> contentHeight = canvas.height;</span><br><span class="line">              <span class="comment">// eslint-disable-next-line no-mixed-operators</span></span><br><span class="line">              <span class="keyword">let</span> pageHeight = contentWidth / <span class="number">592.28</span> * <span class="number">841.89</span>;</span><br><span class="line">              <span class="keyword">let</span> leftHeight = contentHeight;</span><br><span class="line">              <span class="keyword">let</span> position = <span class="number">0</span>;</span><br><span class="line">              <span class="keyword">let</span> imgWidth = <span class="number">595.28</span>;</span><br><span class="line">              <span class="comment">// eslint-disable-next-line no-mixed-operators</span></span><br><span class="line">              <span class="keyword">let</span> imgHeight = <span class="number">592.28</span> / contentWidth * contentHeight;</span><br><span class="line">              <span class="keyword">let</span> pageData = canvas.toDataURL(<span class="string">'image/jpeg'</span>, <span class="number">1.0</span>);</span><br><span class="line">              <span class="keyword">let</span> PDF = <span class="keyword">new</span> JsPDF(<span class="string">''</span>, <span class="string">'pt'</span>, <span class="string">'a4'</span>);</span><br><span class="line">              <span class="keyword">if</span> (leftHeight &lt; pageHeight) &#123;</span><br><span class="line">                  PDF.addImage(pageData, <span class="string">'JPEG'</span>, <span class="number">0</span>, <span class="number">0</span>, imgWidth, imgHeight);</span><br><span class="line">              &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                  <span class="keyword">while</span> (leftHeight &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                      PDF.addImage(pageData, <span class="string">'JPEG'</span>, <span class="number">0</span>, position, imgWidth, imgHeight);</span><br><span class="line">                      leftHeight -= pageHeight;</span><br><span class="line">                      position -= <span class="number">841.89</span>;</span><br><span class="line">                      <span class="keyword">if</span> (leftHeight &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                          PDF.addPage();</span><br><span class="line">                      &#125;</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">              PDF.save(<span class="string">`<span class="subst">$&#123;title&#125;</span>.pdf`</span>);</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>结果在react工程中打印pdf却出现pdf截图不完整，上半部分截图空白的现象：<br><img src="https://tva1.sinaimg.cn/middle/007S8ZIlly1gho2c7s2yrj310a0t0q5g.jpg" alt="截图">;</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>问了度娘，查到出现此现象的原因是因为 <font color="red">截图部分出现滚动条且是在弹窗中展示</font><br>所以需要设置相关滚动高度，最后解决：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getPdf</span>(<span class="params">id,title</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> c = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</span><br><span class="line">  <span class="keyword">var</span> dom = <span class="built_in">document</span>.querySelector(<span class="string">`#<span class="subst">$&#123;id&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> opts = &#123;</span><br><span class="line">    useCORS: <span class="literal">true</span>,</span><br><span class="line">    windowHeight: <span class="number">4111</span>+<span class="number">300</span>, <span class="comment">//获取y方向页面包含滚动条的高度</span></span><br><span class="line">    width: dom.offsetWidth + <span class="number">48</span>,<span class="comment">//48为padding值</span></span><br><span class="line">    height: dom.clientHeight + <span class="number">400</span>,<span class="comment">//可见高度+padding+margin</span></span><br><span class="line">    y: <span class="built_in">document</span>.body.scrollHeight - <span class="number">836</span>, <span class="comment">//滚动条高度修复</span></span><br><span class="line">    scrollX: <span class="number">17</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">  html2Canvas(dom,opts).then(<span class="function"><span class="keyword">function</span> (<span class="params">canvas</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> contentWidth = canvas.width;</span><br><span class="line">                <span class="keyword">let</span> contentHeight = canvas.height;</span><br><span class="line">                <span class="comment">// eslint-disable-next-line no-mixed-operators</span></span><br><span class="line">                <span class="keyword">let</span> pageHeight = contentWidth / <span class="number">592.28</span> * <span class="number">841.89</span>;</span><br><span class="line">                <span class="keyword">let</span> leftHeight = contentHeight;</span><br><span class="line">                <span class="keyword">let</span> position = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">let</span> imgWidth = <span class="number">595.28</span>;</span><br><span class="line">                <span class="comment">// eslint-disable-next-line no-mixed-operators</span></span><br><span class="line">                <span class="keyword">let</span> imgHeight = <span class="number">592.28</span> / contentWidth * contentHeight;</span><br><span class="line">                <span class="keyword">let</span> pageData = canvas.toDataURL(<span class="string">'image/jpeg'</span>, <span class="number">1.0</span>);</span><br><span class="line">                <span class="keyword">let</span> PDF = <span class="keyword">new</span> JsPDF(<span class="string">''</span>, <span class="string">'pt'</span>, <span class="string">'a4'</span>);</span><br><span class="line">                <span class="keyword">if</span> (leftHeight &lt; pageHeight) &#123;</span><br><span class="line">                    PDF.addImage(pageData, <span class="string">'JPEG'</span>, <span class="number">0</span>, <span class="number">0</span>, imgWidth, imgHeight);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">while</span> (leftHeight &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        PDF.addImage(pageData, <span class="string">'JPEG'</span>, <span class="number">0</span>, position, imgWidth, imgHeight);</span><br><span class="line">                        leftHeight -= pageHeight;</span><br><span class="line">                        position -= <span class="number">841.89</span>;</span><br><span class="line">                        <span class="keyword">if</span> (leftHeight &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                            PDF.addPage();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                PDF.save(<span class="string">`<span class="subst">$&#123;title&#125;</span>.pdf`</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2020/08/12/react-html2canvas生成pdf空白/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/07/28/自用vscode插件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">自用vscode插件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: false,
+            verify: false,
+            app_id: "tP7CfK2IYFBRGgtlGqVy81eh-gzGzoHsz",
+            app_key: "FODEspx8aqfH2L9mjiyBxERA",
+            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
+            path: window.location.pathname,
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
     
+
+  
+
+  
+  
+
+  
+  
+  
+  
 
 
           </div>
@@ -230,9 +373,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
