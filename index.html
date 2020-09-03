@@ -156,6 +156,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-antd-form的自定义校验" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/03/antd-form的自定义校验/">antd form的自定义校验</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/03/antd-form的自定义校验/" class="archive-article-date">
+  	<time datetime="2020-09-03T02:05:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给antd form 3.x版本表单里的input加上自定义校验规则，如图对表单字符长度做校验：</p>
+<p><img src="https://tva1.sinaimg.cn/middle/007S8ZIlly1gid8kzzdijj30k002awee.jpg" alt="input"></p>
+<p>antd官网里没有 自定义validator 的相关例子</p>
+<h3 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h3><p>自定义校验 validator()必须要返回callback()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Form.Item label=<span class="string">"姓名"</span>&gt;</span><br><span class="line">  &#123;getFieldDecorator(<span class="string">'username'</span>, &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;<span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">"请输入姓名"</span> &#125;,</span><br><span class="line">      &#123;<span class="attr">validator</span>:<span class="function">(<span class="params">rule,value,callback</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(value&amp;&amp;value.length&gt;<span class="number">10</span>)&#123;</span><br><span class="line">          callback(<span class="string">'姓名长度过长'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        callback()</span><br><span class="line">      &#125;&#125;],</span><br><span class="line">  &#125;)(&lt;Input/&gt;)&#125;</span><br><span class="line">&lt;<span class="regexp">/Form.Item&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/03/antd-form的自定义校验/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-使用iview动态表单校验问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -905,86 +984,6 @@
 
 
   
-    <article id="post-重温数据结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/26/重温数据结构/">重温数据结构与算法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/12/26/重温数据结构/" class="archive-article-date">
-  	<time datetime="2019-12-26T02:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>耗时两周用空闲时间把浙大的数据结构课程又刷了一遍<br><a href="https://www.icourse163.org/course/ZJU-93001" target="_blank" rel="noopener">课程链接</a><br>一天差不多刷一讲<br>重新回顾了一下数据结构<br>又有了更深层次的理解</p>
-        
-          <a class="article-more-a" href="/2019/12/26/重温数据结构/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/26/重温数据结构/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1082,6 +1081,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
@@ -1090,15 +1093,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">keynote</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
