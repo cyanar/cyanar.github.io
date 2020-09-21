@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>使用iview动态表单校验问题 | yunxi的博客</title>
+  <title>Archives: 2020 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;nbsp; 实现功能点击’提交’的时候校验 search栏中表单必填项，如图实现效果展示：">
-<meta name="keywords" content="日常问题">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用iview动态表单校验问题">
-<meta property="og:url" content="http://yunxii.cn/2020/08/21/使用iview动态表单校验问题/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="yunxi的博客">
+<meta property="og:url" content="http://yunxii.cn/archives/2020/page/2/index.html">
 <meta property="og:site_name" content="yunxi的博客">
-<meta property="og:description" content="&amp;nbsp; 实现功能点击’提交’的时候校验 search栏中表单必填项，如图实现效果展示：">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://tva1.sinaimg.cn/middle/007S8ZIlly1ghydz5by9ij308o0adq3p.jpg">
-<meta property="og:updated_time" content="2020-08-21T06:08:43.115Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用iview动态表单校验问题">
-<meta name="twitter:description" content="&amp;nbsp; 实现功能点击’提交’的时候校验 search栏中表单必填项，如图实现效果展示：">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/middle/007S8ZIlly1ghydz5by9ij308o0adq3p.jpg">
+<meta name="twitter:title" content="yunxi的博客">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -161,209 +154,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-使用iview动态表单校验问题" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      使用iview动态表单校验问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/16/很多could-not-freeze/" class="archive-article-date">
+  	<time datetime="2020-04-16T02:18:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/16/很多could-not-freeze/">很多could not freeze</a>
     </h1>
   
 
-        
-        <a href="/2020/08/21/使用iview动态表单校验问题/" class="archive-article-date">
-  	<time datetime="2020-08-21T05:48:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&nbsp;</p>
-<h3 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h3><p>点击’提交’的时候校验 search栏中表单必填项，如图实现效果展示：<br><img src="https://tva1.sinaimg.cn/middle/007S8ZIlly1ghydz5by9ij308o0adq3p.jpg" alt="实现效果"></p>
-<a id="more"></a>
-<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>动态表单的数据结构（vue）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    searchConfig: &#123;</span><br><span class="line">      configList: [&#123;</span><br><span class="line">        key: <span class="string">'searchStr'</span>,</span><br><span class="line">        type: <span class="string">'input'</span>,</span><br><span class="line">        label: <span class="string">'模糊查询'</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        key: <span class="string">'createDateRange'</span>,</span><br><span class="line">        type: <span class="string">'dateRange'</span>,</span><br><span class="line">        label: <span class="string">'创建时间'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>表单的校验代码(部分代码)：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Form ref=<span class="string">"searchform"</span> :model=<span class="string">"searchConfig"</span> label-position=<span class="string">"top"</span> v-show=<span class="string">"showForm"</span>&gt;</span><br><span class="line">       &lt;template v-<span class="keyword">for</span>=<span class="string">"(item, index) in searchConfig.configList"</span>&gt;</span><br><span class="line">         &lt;FormItem label=<span class="string">""</span> :key=<span class="string">"index"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-list"</span> &gt;</span><br><span class="line">           &lt;Row&gt;</span><br><span class="line">               &lt;Col span=<span class="string">"7"</span>&gt;</span><br><span class="line">                   &lt;FormItem prop=<span class="string">"label"</span> required&gt;</span><br><span class="line">                       &lt;Input v-model=<span class="string">"item.label"</span> size=<span class="string">"small"</span> placeholder=<span class="string">"中文名"</span>/&gt;</span><br><span class="line">                   &lt;<span class="regexp">/FormItem&gt;</span></span><br><span class="line"><span class="regexp">               &lt;/</span>Col&gt;</span><br></pre></td></tr></table></figure>
-
-<p>按照上面这么写出现报错：<font color="red">“please transfer a valid prop path to form item!”</font><br><strong>看报错是prop路径不对</strong></p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>修改为正确的prop路径：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;Form ref=<span class="string">"searchform"</span> :model=<span class="string">"searchConfig"</span> label-position=<span class="string">"top"</span> v-show=<span class="string">"showForm"</span>&gt;</span><br><span class="line">        &lt;template v-<span class="keyword">for</span>=<span class="string">"(item, index) in searchConfig.configList"</span>&gt;</span><br><span class="line">          &lt;FormItem label=<span class="string">""</span> :key=<span class="string">"index"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"form-list"</span> :prop=<span class="string">"'configList.'+index"</span>&gt;</span><br><span class="line">            &lt;Row&gt;</span><br><span class="line">                &lt;Col span=<span class="string">"7"</span>&gt;</span><br><span class="line">                    &lt;FormItem :prop=<span class="string">"'configList.'+index + '.label'"</span> :rules=<span class="string">"&#123;required: true, message: '必填', trigger: 'blur'&#125;"</span>&gt;</span><br><span class="line">                        &lt;Input v-model=<span class="string">"item.label"</span> size=<span class="string">"small"</span> placeholder=<span class="string">"中文名"</span>/&gt;</span><br><span class="line">                    &lt;<span class="regexp">/FormItem&gt;</span></span><br><span class="line"><span class="regexp">                &lt;/</span>Col&gt;</span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">日常问题记录</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2020/08/21/使用iview动态表单校验问题/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/09/03/antd-form的自定义校验/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          antd form的自定义校验
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/08/12/react-html2canvas生成pdf空白/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">react html2canvas生成pdf空白</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    </div></section>
   
 
-  
-    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
-      <div id="vcomment" class="comment"></div> 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-    window.onload = function() {
-        new Valine({
-            el: '#vcomment',
-            notify: false,
-            verify: false,
-            app_id: "tP7CfK2IYFBRGgtlGqVy81eh-gzGzoHsz",
-            app_key: "FODEspx8aqfH2L9mjiyBxERA",
-            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
-            path: window.location.pathname,
-            avatar:"mm"
-        });
-    }
-</script>
-    </section>
     
-
-  
-
-  
-  
-
-  
-  
-  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2020/">&laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -387,8 +234,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
