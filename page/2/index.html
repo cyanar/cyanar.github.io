@@ -422,7 +422,7 @@
 <p>6 将改动文件从暂存区提交到当前分支：<strong>git commit -m ‘xxx’</strong></p>
 <p>7 5和6两步可以合写为： <strong>git commit -am ‘xxx’</strong></p>
 <p>8 将分支改动推送到远端：<strong>git push</strong></p>
-<p>9 将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 – <strong>git diff feature/example</strong>( <em>审查代码 防止出错</em> ) 再合并：<strong>git merge feature/example</strong> 最后再 <strong>git push</strong> 推送到远端</p>
+<p>9 将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 – <strong>git diff feature/example</strong>( <em>审查代码 防止出错</em> ) 再合并：<strong>git merge feature/example –no-ff</strong> 最后再 <strong>git push</strong> 推送到远端</p>
 <p>10 分支发到预发或线上环境同上</p>
         
           <a class="article-more-a" href="/2019/10/15/git常用命令/#more">more >></a>
@@ -727,15 +727,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -747,15 +743,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">vscode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -764,6 +756,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>

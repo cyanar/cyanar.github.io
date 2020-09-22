@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yunxii.cn/2019/10/15/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2020-09-22T07:13:36.612Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yunxii.cn/2020/09/21/leetcode-vscode%E6%8F%92%E4%BB%B6%E7%99%BB%E5%BD%95%E4%B8%8D%E4%B8%8A/</loc>
     
     <lastmod>2020-09-21T02:29:24.583Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://yunxii.cn/2020/04/19/%E4%BA%B2%E6%B5%8B%E5%B8%B8%E7%94%A8vscode%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2020-07-28T02:44:36.167Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yunxii.cn/2019/10/15/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2020-07-20T11:21:12.722Z</lastmod>
     
   </url>
   
