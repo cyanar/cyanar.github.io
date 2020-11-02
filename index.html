@@ -253,8 +253,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h3><p>如图二叉树：<br><img src="https://tva1.sinaimg.cn/small/007S8ZIlly1gjkafyuogij30pc0igwjb.jpg" alt="binarytree"></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tree = &#123;</span><br><span class="line">  val:<span class="number">1</span>,</span><br><span class="line">  left:&#123;</span><br><span class="line">    val:<span class="number">2</span>,</span><br><span class="line">    left:&#123;</span><br><span class="line">      val:<span class="number">4</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right: &#123;</span><br><span class="line">      val:<span class="number">5</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  right:&#123;</span><br><span class="line">    val:<span class="number">3</span>,</span><br><span class="line">    left:<span class="literal">null</span>,</span><br><span class="line">    right:&#123;</span><br><span class="line">      val:<span class="number">6</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h3 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h3><p>如图二叉树：<br><img src="https://tva1.sinaimg.cn/small/0081Kckwly1gkawa5y9jzj30gm0bkt9k.jpg" alt="binarytree"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tree = &#123;</span><br><span class="line">  val:<span class="number">1</span>,</span><br><span class="line">  left:&#123;</span><br><span class="line">    val:<span class="number">2</span>,</span><br><span class="line">    left:&#123;</span><br><span class="line">      val:<span class="number">4</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right: &#123;</span><br><span class="line">      val:<span class="number">5</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  right:&#123;</span><br><span class="line">    val:<span class="number">3</span>,</span><br><span class="line">    left:<span class="literal">null</span>,</span><br><span class="line">    left:&#123;</span><br><span class="line">      val:<span class="number">6</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right:&#123;</span><br><span class="line">      val:<span class="number">7</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2020/10/10/二叉树多种遍历/#more">more >></a>
         
@@ -887,11 +887,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">日常问题记录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">其他</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">日常问题记录</a>
         		</li>
       		
 		</ul>
@@ -1028,19 +1028,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">alfred</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1052,7 +1048,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1060,7 +1056,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1069,6 +1065,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
