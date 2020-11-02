@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="二叉树遍历如图二叉树： 123456789101112131415161718192021222324252627282930const tree = &amp;#123;  val:1,  left:&amp;#123;    val:2,    left:&amp;#123;      val:4,      left: null,      right: null    &amp;#125;,    right: &amp;#12">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://tva1.sinaimg.cn/small/0081Kckwly1gkawa5y9jzj30gm0bkt9k.jpg">
-<meta property="og:updated_time" content="2020-11-02T08:46:38.766Z">
+<meta property="og:image" content="https://tva1.sinaimg.cn/middle/0081Kckwly1gkaxeqnk7fj30gm0bk74z.jpg">
+<meta property="og:updated_time" content="2020-11-02T08:51:07.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树多种遍历">
 <meta name="twitter:description" content="二叉树遍历如图二叉树： 123456789101112131415161718192021222324252627282930const tree = &amp;#123;  val:1,  left:&amp;#123;    val:2,    left:&amp;#123;      val:4,      left: null,      right: null    &amp;#125;,    right: &amp;#12">
-<meta name="twitter:image" content="https://tva1.sinaimg.cn/small/0081Kckwly1gkawa5y9jzj30gm0bkt9k.jpg">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/middle/0081Kckwly1gkaxeqnk7fj30gm0bk74z.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -181,7 +181,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h3><p>如图二叉树：<br><img src="https://tva1.sinaimg.cn/small/0081Kckwly1gkawa5y9jzj30gm0bkt9k.jpg" alt="binarytree"></p>
+        <h3 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h3><p>如图二叉树：<br><img src="https://tva1.sinaimg.cn/middle/0081Kckwly1gkaxeqnk7fj30gm0bk74z.jpg" alt="binarytree"></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> tree = &#123;</span><br><span class="line">  val:<span class="number">1</span>,</span><br><span class="line">  left:&#123;</span><br><span class="line">    val:<span class="number">2</span>,</span><br><span class="line">    left:&#123;</span><br><span class="line">      val:<span class="number">4</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right: &#123;</span><br><span class="line">      val:<span class="number">5</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  right:&#123;</span><br><span class="line">    val:<span class="number">3</span>,</span><br><span class="line">    left:<span class="literal">null</span>,</span><br><span class="line">    left:&#123;</span><br><span class="line">      val:<span class="number">6</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;,</span><br><span class="line">    right:&#123;</span><br><span class="line">      val:<span class="number">7</span>,</span><br><span class="line">      left: <span class="literal">null</span>,</span><br><span class="line">      right: <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
@@ -432,6 +432,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">alfred</a>
               </li>
              
@@ -444,19 +448,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">keynote</a>
               </li>
              
               <li class="article-tag-list-item">
