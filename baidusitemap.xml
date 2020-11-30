@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yunxii.cn/2019/10/15/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-11-30</lastmod>
+  </url>  <url>
     <loc>http://yunxii.cn/2020/10/10/%E4%BA%8C%E5%8F%89%E6%A0%91%E5%A4%9A%E7%A7%8D%E9%81%8D%E5%8E%86/</loc>
     <lastmod>2020-11-02</lastmod>
   </url>  <url>
@@ -9,9 +12,6 @@
   </url>  <url>
     <loc>http://yunxii.cn/2020/09/28/alfred-%E6%9F%A5%E7%9C%8BIP%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2020-09-28</lastmod>
-  </url>  <url>
-    <loc>http://yunxii.cn/2019/10/15/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2020-09-25</lastmod>
   </url>  <url>
     <loc>http://yunxii.cn/2020/09/21/leetcode-vscode%E6%8F%92%E4%BB%B6%E7%99%BB%E5%BD%95%E4%B8%8D%E4%B8%8A/</loc>
     <lastmod>2020-09-21</lastmod>

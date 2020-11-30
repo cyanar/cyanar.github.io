@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-09-25T08:01:00.411Z">
+<meta property="og:updated_time" content="2020-11-30T09:54:57.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令总结">
 <meta name="twitter:description" content="提交代码流程 1 从 master 分支开出新分支 feature/example：git checkout -b feature/example 2 将此feature分支推送到远端： git push –set-upstream origin feature/example 3 查看此分支git状态：git status 4 查看分支改动的详细代码：git diff 5 将改动文件从工作区添">
@@ -197,8 +197,11 @@
 <p>12 5步添加之后想要撤销提交：<strong>git reset .</strong></p>
 <p>13 6步commit之后想撤回：<strong>先 git reset HEAD~1</strong> 然后 强推到远端 <strong>git push origin feature/example –force</strong></p>
 <p>14 想撤销某个版本commit：<strong>git revert -m 1 版本号</strong> <a href="https://blog.justwe.site/post/git-revert/" target="_blank" rel="noopener">参考：记一次git revert的经历</a></p>
-<p>15 merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：<strong>git log或者git reflog</strong>, 最后 <strong>git reset –mixed 版本号</strong></p>
+<p>15 merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：<strong>git log或者git reflog</strong>, 然后 <strong>git reset –mixed 版本号</strong>  最后把reset改动推送到远端：<strong>git push origin dev/master -f</strong><br><font color="red">(注意区分reset和revert的区别，reset会撤销此分支版本号x之后的所有commit，而revert会撤销仅仅此版本号的commit并作为一个新的commit)</font></p>
+<p>16 reset后 后悔怎么办： <strong>git reflog</strong>查看reset操作之前的版本号mm，然后再次<strong>git reset –mixed mm</strong></p>
 </li>
+</ul>
+<ul>
 <li><p><strong>其他</strong></p>
 <p>查看所有分支：<strong>git branch -a</strong></p>
 <p>删除本地分支：<strong>git branch -d feature/example</strong></p>
@@ -455,15 +458,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -475,11 +478,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -488,10 +495,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
