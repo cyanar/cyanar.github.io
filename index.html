@@ -182,16 +182,9 @@
 <li>提供了响应式 (Reactive) 和组件化 (Composable) 的视图组件。</li>
 <li>将注意力集中保持在核心库，而将其他功能如路由和全局状态管理交给相关的库。</li>
 </ol>
-<p>网上也有很多文章从市场占比，开发生态，配套UI组件库来比较，这些大家都知道，无关痛痒，我主要说下适用场景：</p>
-<ol>
-<li>内嵌h5页面，项目小，团队成员技术栈主vue，公司内部vue生态健全（如vue组件库，vue优化，vue插件例如我司），快速上手项目，开发周期短</li>
-</ol>
-<p>以上场景会选择vue，为什么呢？<br>JSX vs 模版写法：<br>react推崇all in js, jsx是createElement的语法糖,js原生写法写页面，可以使用临时变量、JS 自带的流程控制等等，写法灵活<br>连css作用域也是css-in-js的方式实现的<br>模版语法相对来说比较简单，类似html的写法，一个vue组件包含了style,script,template清晰易懂，通过vue-loader,css直接scoped 标签中设置预处理器<br>性能优化：<br>react 当某个组件的状态发生变化时，它会以该组件为根，重新渲染整个组件子树，如要避免不必要的子组件的重渲染，你需要在所有可能的地方使用 PureComponent，或是手动实现 shouldComponentUpdate 方法<br>vue中组件的依赖是在渲染过程中自动追踪的，开发者不需要考虑此类优化<br>学习曲线：<br>react学习曲线陡峭，需要学jsx,es6,自己选择搭配状态管理（redux or mobx or hooks，）等等，vue不用考虑太多，直接vuex+vue-router</p>
-<ol start="2">
-<li>大项目，开发周期长，公司内部react生态健全（如umi,muji和相关插件），追求稳定和高性能，有使用React-Native跨端开发，易于测试和升级</li>
-</ol>
-<p>以上场景推荐使用react,为什么？<br>react背后是facebook整个公司维护，保证质量和性能，vue对TS的支持不友好<br>组件内状态管理：<br>设计思想不同，数据变化时，vue将引用对象直接修改，每个属性通过watcher感知到变化并更新界面，页面数据很多时watcher和deps很多，影响性能，react用setState修改，数据可控<br>复杂状态管理：<br>vue只有vuex,react周边有redux,mobx,还能搭配诸多中间件，且这些库与react不会有强关联，但vuex强依赖vue,vue升级vuex也需要升级<br>客户端RN项目：<br>公司内部有RN的项目，使用react更快上手</p>
-
+        
+          <a class="article-more-a" href="/2021/02/01/react-vs-vue/#more">more >></a>
+        
       
 
       
@@ -1019,11 +1012,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1039,7 +1032,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
