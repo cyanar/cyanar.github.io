@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>Archives: 2020 | yunxi的博客</title>
+  <title>react vs vue | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yunxi的博客">
-<meta property="og:url" content="http://yunxii.cn/archives/2020/index.html">
+  <meta name="description" content="首先，两者都是图灵完备（尤雨溪所说），从 State of JS 近两年的数据来看，两者的满意率是差不多的，都在 90% 出头，说明两者在 “满足目标用户的需求” 这个衡量标准下，表现是差不多的。只是各有优缺点适用场景不同，共同点：  使用 Virtual DOM 提供了响应式 (Reactive) 和组件化 (Composable) 的视图组件。 将注意力集中保持在核心库，而将其他功能如路由和全">
+<meta name="keywords" content="前端框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react vs vue">
+<meta property="og:url" content="http://yunxii.cn/2021/02/01/react-vs-vue/index.html">
 <meta property="og:site_name" content="yunxi的博客">
+<meta property="og:description" content="首先，两者都是图灵完备（尤雨溪所说），从 State of JS 近两年的数据来看，两者的满意率是差不多的，都在 90% 出头，说明两者在 “满足目标用户的需求” 这个衡量标准下，表现是差不多的。只是各有优缺点适用场景不同，共同点：  使用 Virtual DOM 提供了响应式 (Reactive) 和组件化 (Composable) 的视图组件。 将注意力集中保持在核心库，而将其他功能如路由和全">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2021-02-01T06:12:26.566Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yunxi的博客">
+<meta name="twitter:title" content="react vs vue">
+<meta name="twitter:description" content="首先，两者都是图灵完备（尤雨溪所说），从 State of JS 近两年的数据来看，两者的满意率是差不多的，都在 90% 出头，说明两者在 “满足目标用户的需求” 这个衡量标准下，表现是差不多的。只是各有优缺点适用场景不同，共同点：  使用 Virtual DOM 提供了响应式 (Reactive) 和组件化 (Composable) 的视图组件。 将注意力集中保持在核心库，而将其他功能如路由和全">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -154,367 +159,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-react-vs-vue" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      react vs vue
+    </h1>
+  
+
+        
+        <a href="/2021/02/01/react-vs-vue/" class="archive-article-date">
+  	<time datetime="2021-02-01T03:01:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先，两者都是图灵完备（尤雨溪所说），从 State of JS 近两年的数据来看，两者的满意率是差不多的，都在 90% 出头，说明两者在 “满足目标用户的需求” 这个衡量标准下，表现是差不多的。只是各有优缺点适用场景不同，共同点：</p>
+<ol>
+<li>使用 Virtual DOM</li>
+<li>提供了响应式 (Reactive) 和组件化 (Composable) 的视图组件。</li>
+<li>将注意力集中保持在核心库，而将其他功能如路由和全局状态管理交给相关的库。</li>
+</ol>
+<p>网上也有很多文章从市场占比，开发生态，配套UI组件库来比较，这些大家都知道，无关痛痒，我主要说下适用场景：</p>
+<ol>
+<li>内嵌h5页面，项目小，团队成员技术栈主vue，公司内部vue生态健全（如vue组件库，vue优化，vue插件例如我司），快速上手项目，开发周期短</li>
+</ol>
+<p>以上场景会选择vue，为什么呢？<br>JSX vs 模版写法：<br>react推崇all in js, jsx是createElement的语法糖,js原生写法写页面，可以使用临时变量、JS 自带的流程控制等等，写法灵活<br>连css作用域也是css-in-js的方式实现的<br>模版语法相对来说比较简单，类似html的写法，一个vue组件包含了style,script,template清晰易懂，通过vue-loader,css直接scoped 标签中设置预处理器<br>性能优化：<br>react 当某个组件的状态发生变化时，它会以该组件为根，重新渲染整个组件子树，如要避免不必要的子组件的重渲染，你需要在所有可能的地方使用 PureComponent，或是手动实现 shouldComponentUpdate 方法<br>vue中组件的依赖是在渲染过程中自动追踪的，开发者不需要考虑此类优化<br>学习曲线：<br>react学习曲线陡峭，需要学jsx,es6,自己选择搭配状态管理（redux or mobx or hooks，）等等，vue不用考虑太多，直接vuex+vue-router</p>
+<ol start="2">
+<li>大项目，开发周期长，公司内部react生态健全（如umi,muji和相关插件），追求稳定和高性能，有使用React-Native跨端开发，易于测试和升级</li>
+</ol>
+<p>以上场景推荐使用react,为什么？<br>react背后是facebook整个公司维护，保证质量和性能，vue对TS的支持不友好<br>组件内状态管理：<br>设计思想不同，数据变化时，vue将引用对象直接修改，每个属性通过watcher感知到变化并更新界面，页面数据很多时watcher和deps很多，影响性能，react用setState修改，数据可控<br>复杂状态管理：<br>vue只有vuex,react周边有redux,mobx,还能搭配诸多中间件，且这些库与react不会有强关联，但vuex强依赖vue,vue升级vuex也需要升级<br>客户端RN项目：<br>公司内部有RN的项目，使用react更快上手</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/18/alipayjsbridge-的选择图片坑点/" class="archive-article-date">
-  	<time datetime="2020-12-18T01:48:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/18/alipayjsbridge-的选择图片坑点/">alipayjsbridge 的选择图片坑点</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/19/排序算法总结/" class="archive-article-date">
-  	<time datetime="2020-10-19T07:17:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/19/排序算法总结/">排序算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/10/二叉树多种遍历/" class="archive-article-date">
-  	<time datetime="2020-10-10T07:50:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/10/二叉树多种遍历/">二叉树多种遍历</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/28/alfred-查看IP工具/" class="archive-article-date">
-  	<time datetime="2020-09-28T07:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/28/alfred-查看IP工具/">alfred 查看IP工具</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">alfred</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/21/leetcode-vscode插件登录不上/" class="archive-article-date">
-  	<time datetime="2020-09-21T02:23:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/21/leetcode-vscode插件登录不上/">leetcode vscode插件登录不上</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/03/antd-form的自定义校验/" class="archive-article-date">
-  	<time datetime="2020-09-03T02:05:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/03/antd-form的自定义校验/">antd form的自定义校验</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/21/使用iview动态表单校验问题/" class="archive-article-date">
-  	<time datetime="2020-08-21T05:48:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/21/使用iview动态表单校验问题/">使用iview动态表单校验问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/12/react-html2canvas生成pdf空白/" class="archive-article-date">
-  	<time datetime="2020-08-12T06:15:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/12/react-html2canvas生成pdf空白/">react html2canvas生成pdf空白</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/28/自用vscode插件/" class="archive-article-date">
-  	<time datetime="2020-07-28T02:43:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/28/自用vscode插件/">自用vscode插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">vscode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/18/重读VUE2-x官方文档/" class="archive-article-date">
-  	<time datetime="2020-06-18T06:13:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/重读VUE2-x官方文档/">重读VUE2.x官方文档</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -522,30 +209,133 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端框架</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2021/02/01/react-vs-vue/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/12/18/alipayjsbridge-的选择图片坑点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">alipayjsbridge 的选择图片坑点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: false,
+            verify: false,
+            app_id: "tP7CfK2IYFBRGgtlGqVy81eh-gzGzoHsz",
+            app_key: "FODEspx8aqfH2L9mjiyBxERA",
+            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
+            path: window.location.pathname,
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
     
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &raquo;</a>
-    </nav>
+
+  
+
+  
+  
+
+  
+  
+  
   
 
 
@@ -569,8 +359,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
