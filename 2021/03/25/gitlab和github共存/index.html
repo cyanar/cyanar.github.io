@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="yunxi的博客">
 <meta property="og:description" content="问题描述配置完github ssh之后,发现公司的gitlab没发push代码了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-03-25T03:06:43.890Z">
+<meta property="og:updated_time" content="2021-03-25T06:18:36.396Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gitlab和github共存">
 <meta name="twitter:description" content="问题描述配置完github ssh之后,发现公司的gitlab没发push代码了">
@@ -185,8 +185,6 @@
 <h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>原因是在设置gitlab的时候修改了config配置,需要修改为：</p>
 <p><strong>open ~/.ssh/config</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#公司的git地址</span><br><span class="line">Host git.xxx.com</span><br><span class="line">  AddKeysToAgent yes</span><br><span class="line">  UseKeychain yes</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Host github.com</span><br><span class="line">  AddKeysToAgent yes</span><br><span class="line">  UseKeychain yes</span><br><span class="line">  IdentityFile ~/.ssh/id_xxx #访问github的ssh key</span><br></pre></td></tr></table></figure>
-
-
       
 
       
@@ -268,6 +266,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/07/23/vue-悬浮条/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue 悬浮条
+        
+      </div>
+    </a>
   
   
     <a href="/2021/02/01/react-vs-vue/" id="article-nav-older" class="article-nav-link-wrap">
@@ -421,7 +428,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -429,7 +436,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">alfred</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -441,7 +452,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">日常问题记录</a>
+                <a href="javascript:void(0)" class="js-tag color5">业务问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -457,11 +468,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
