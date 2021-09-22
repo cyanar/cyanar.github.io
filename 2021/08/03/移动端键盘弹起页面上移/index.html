@@ -17,7 +17,7 @@
 <meta property="og:description" content="业务问题input输入框，底部确认按钮fix定位，输入键盘弹起把页面及确认按钮顶上去，如图：">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tva1.sinaimg.cn/middle/008i3skNly1gt3dluy52ij30u01t0dik.jpg">
-<meta property="og:updated_time" content="2021-08-03T02:13:11.198Z">
+<meta property="og:updated_time" content="2021-08-03T02:20:12.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端键盘弹起页面上移">
 <meta name="twitter:description" content="业务问题input输入框，底部确认按钮fix定位，输入键盘弹起把页面及确认按钮顶上去，如图：">
@@ -185,7 +185,7 @@
 <a id="more"></a>
 
 <p><img src="https://tva1.sinaimg.cn/middle/008i3skNly1gt3dluy52ij30u01t0dik.jpg" alt="问题描述"></p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>需要监听页面risize事件，对比默认屏幕高度和实时屏幕高度来判断 底部按钮的显示隐藏</p>
+<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><p>需要监听页面resize事件，对比默认屏幕高度和实时屏幕高度来判断 底部按钮的显示隐藏</p>
 <p>代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">'confirm-btn'</span> v-show=<span class="string">'hideshow'</span>&gt;确认&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">data() &#123;</span></span><br><span class="line"><span class="regexp">    return &#123;</span></span><br><span class="line"><span class="regexp">        hideshow: true,</span></span><br><span class="line"><span class="regexp">        docmHeight: document.documentElement.clientHeight || document.body.clientHeight, /</span><span class="regexp">/默认屏幕高度</span></span><br><span class="line"><span class="regexp">        showHeight: document.documentElement.clientHeight || document.body.clientHeight /</span><span class="regexp">/实时屏幕高度</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;,</span></span><br><span class="line"><span class="regexp">mounted() &#123;</span></span><br><span class="line"><span class="regexp">    /</span><span class="regexp">/ window.onresize监听页面高度的变化</span></span><br><span class="line"><span class="regexp">    window.onresize = () =&gt; (() =&gt; &#123;</span></span><br><span class="line"><span class="regexp">        this.showHeight = document.documentElement.clientHeight || document.body.clientHeight;</span></span><br><span class="line"><span class="regexp">    &#125;)();</span></span><br><span class="line"><span class="regexp">&#125;,</span></span><br><span class="line"><span class="regexp">watch: &#123;</span></span><br><span class="line"><span class="regexp">    showHeight: function() &#123;</span></span><br><span class="line"><span class="regexp">        if (this.docmHeight &gt; this.showHeight) &#123;</span></span><br><span class="line"><span class="regexp">            this.hideshow = false;</span></span><br><span class="line"><span class="regexp">        &#125; else &#123;</span></span><br><span class="line"><span class="regexp">            this.hideshow = true;</span></span><br><span class="line"><span class="regexp">        &#125;</span></span><br><span class="line"><span class="regexp">    &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -271,6 +271,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/09/22/动态规划设计之最长递增子序列/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          动态规划设计之最长递增子序列
+        
+      </div>
+    </a>
   
   
     <a href="/2021/07/23/vue-悬浮条/" id="article-nav-older" class="article-nav-link-wrap">
@@ -428,11 +437,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日常问题</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -448,15 +457,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">业务问题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">前端框架</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
+                <a href="javascript:void(0)" class="js-tag color5">业务问题</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,11 +469,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">vscode</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
