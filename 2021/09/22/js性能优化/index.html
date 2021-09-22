@@ -6,15 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yunxii.cn">
-  <title>Archives: 2020/12 | yunxi的博客</title>
+  <title>js性能优化 | yunxi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="yunxi的博客">
-<meta property="og:url" content="http://yunxii.cn/archives/2020/12/index.html">
+  <meta name="description" content="背景看了某教程之后的-js性能优化总结">
+<meta name="keywords" content="前端优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js性能优化">
+<meta property="og:url" content="http://yunxii.cn/2021/09/22/js性能优化/index.html">
 <meta property="og:site_name" content="yunxi的博客">
+<meta property="og:description" content="背景看了某教程之后的-js性能优化总结">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwlwhmf98j31g30u0495.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwmqmb9u3j31v2094jti.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwmzy7a1vj31tm0m4jyk.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwod2brr7j31bm0bk7dk.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwohbratbj31rg0lwam6.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwoohim2pj30yi0gcgp2.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwpma5b7vj30q60aojxh.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwpu38yk6j31ee0k2gyw.jpg">
+<meta property="og:updated_time" content="2021-09-22T05:49:25.819Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yunxi的博客">
+<meta name="twitter:title" content="js性能优化">
+<meta name="twitter:description" content="背景看了某教程之后的-js性能优化总结">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008eGmZEly1gnwlwhmf98j31g30u0495.jpg">
   
     <link rel="alternative" href="/atom.xml" title="yunxi的博客" type="application/atom+xml">
   
@@ -154,49 +168,230 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js性能优化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/18/alipayjsbridge-的选择图片坑点/" class="archive-article-date">
-  	<time datetime="2020-12-18T01:48:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/18/alipayjsbridge-的选择图片坑点/">alipayjsbridge 的选择图片坑点</a>
+    <h1 class="article-title" itemprop="name">
+      js性能优化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2021/09/22/js性能优化/" class="archive-article-date">
+  	<time datetime="2021-09-22T03:27:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-09-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>看了某教程之后的-js性能优化总结</p>
+<a id="more"></a>
 
+<h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>内存：由可读写单元组成，表示一片可操作空间</p>
+<p>管理：人为的去操作一片空间的申请、使用和释放</p>
+<h3 id="垃圾回收和常见GC算法"><a href="#垃圾回收和常见GC算法" class="headerlink" title="垃圾回收和常见GC算法"></a>垃圾回收和常见GC算法</h3><p>js中内存管理是自动的（对象不再引用时是垃圾，对象不能从根上访问到时是垃圾）</p>
+<p>js中的根可以理解为全局变量对象</p>
+<p>GC：垃圾回收机制的简写</p>
+<p>GC可以找到内存中的垃圾、并释放和回收空间</p>
+<p>常见的GC算法：</p>
+<ul>
+<li>引用计数–设置引用数，判断当前引用数是否为0。</li>
+</ul>
+<p>优点：发现垃圾时立即回收 最大限度减少程序暂停<br>缺点：无法回收循环引用的对象，时间开销大</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//因为obj1和obj2的循环引用 其引用计数不为0，不会被GC</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> obj1 = &#123;&#125;;</span><br><span class="line">    <span class="keyword">const</span> obj2 = &#123;&#125;;</span><br><span class="line">    obj1.name = obj2;</span><br><span class="line">    obj2.name = obj1;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello'</span>;</span><br><span class="line">&#125;</span><br><span class="line">fn();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>标记清除——分标记和清除两个阶段完成</li>
+</ul>
+<p>优点：解决循环引用不能被回收的问题</p>
+<p>缺点：回收空间在地址上的不连续 导致空间的碎片化<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwlwhmf98j31g30u0495.jpg" alt="GC"></p>
+<ul>
+<li>标记整理——可看成是标记清除的增强版，标记阶段的操作和标记清除一致，清除阶段会先执行整理，移动对象位置</li>
+</ul>
+<p>优点：减少碎片化空间；缺点：不会立即回收垃圾对象</p>
+<h3 id="V8引擎的垃圾回收"><a href="#V8引擎的垃圾回收" class="headerlink" title="V8引擎的垃圾回收"></a>V8引擎的垃圾回收</h3><p>V8是一款主流的JS执行引擎，V8采用即时编译，V8内存设限（64操作系统1.5G,32 操作系统不超过800M）</p>
+<p>V8垃圾回收策略：采用分代回收的思想，堆内存分为新生代、老生代，针对不同对象采用不同算法</p>
+<p>V8中常用GC算法：分代回收、空间复制、标记清除、标记整理、标记增量。</p>
+<p><strong>新生代的GC：</strong></p>
+<p>小空间用于存储新生代对象（32M|16M）–存活时间较多的对象</p>
+<p>新生代对象回收实现：采用复制算法+标记整理</p>
+<p>新生代内存分为两个相等大小空间–使用空间From，空闲空间To，活动对象存储于From空间，标记整理后将活动对象拷贝至To，</p>
+<p>From 与To交换空间完成释放</p>
+<p><strong>回收细节说明：</strong></p>
+<p>拷贝过程中可能出现晋升</p>
+<p>晋升就是将新生代对象移动至老生代</p>
+<p>一轮GC还存活的新生代需要晋升  or To 空间的使用率超过25%</p>
+<p><strong>老生代的GC：</strong><br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwmqmb9u3j31v2094jti.jpg" alt="GC"><br>老生代内存（1.4G|700M）,指存活时间较长的对象（全局对象或闭包）。</p>
+<p><strong>GC实现：主要采用标记清除、标记整理、增量标记算法</strong></p>
+<p>首先使用标记清除完成垃圾空间的回收，采用标记整理进行空间优化（新生代移动至老生代发现空间不足时），采用增量标记进行效率优化</p>
+<p>关于增量标记：分成若干个回收小任务<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwmzy7a1vj31tm0m4jyk.jpg" alt="GC"><br><strong>细节对比：</strong></p>
+<p>新生代区域垃圾回收使用空间换时间</p>
+<p>老生代区域垃圾回收不适合复制算法</p>
+<h3 id="performance工具"><a href="#performance工具" class="headerlink" title="performance工具"></a>performance工具</h3><p>通过performance时刻监控内存：浏览器控制台–点击performance中录制–模拟用户操作–停止录制–查看报告</p>
+<p><strong>内存问题的外在表现：</strong></p>
+<p>页面出现延迟加载或经常性暂停、页面持续性出现糟糕性能、页面性能随时间延长越来越差</p>
+<p>界定内存问题的标准：内存泄漏（内存使用持续升高）、内存膨胀（在多数设备存在性能问题）、频繁垃圾回收</p>
+<p><strong>监控内存的几种方式</strong><br>1.任务管理器监控内存：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">btn.onClick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arrayList = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1000000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwod2brr7j31bm0bk7dk.jpg" alt="GC"><br>2.Timeline记录内存<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwohbratbj31rg0lwam6.jpg" alt="GC"><br>3.堆快照查找分离DOM（分离DOM：未在页面上显示但被JS引用）<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwoohim2pj30yi0gcgp2.jpg" alt="GC"><br>4.判断是否频繁GC：Timeline中频繁的上升下降，任务管理器中数据频繁的增加减小</p>
+<h3 id="代码优化实例"><a href="#代码优化实例" class="headerlink" title="代码优化实例"></a>代码优化实例</h3><ul>
+<li>慎用全局变量</li>
+<li>缓存全局变量</li>
+<li>通过原型增加新增方法</li>
+<li>避开闭包陷阱</li>
+<li>避免属性访问方法</li>
+<li>for循环优化：<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwpma5b7vj30q60aojxh.jpg" alt="gc"></li>
+<li>采用最优循环方式：forEach &gt; for &gt; for..in</li>
+<li>优化节点添加：<br><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnwpu38yk6j31ee0k2gyw.jpg" alt="gc"></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端优化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yunxii.cn/2021/09/22/js性能优化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2021/09/22/动态规划设计之最长递增子序列/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DP-最长递增子序列</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
+  
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    window.onload = function() {
+        new Valine({
+            el: '#vcomment',
+            notify: false,
+            verify: false,
+            app_id: "tP7CfK2IYFBRGgtlGqVy81eh-gzGzoHsz",
+            app_key: "FODEspx8aqfH2L9mjiyBxERA",
+            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
+            path: window.location.pathname,
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
     
+
+  
+
+  
+  
+
+  
+  
+  
+  
 
 
           </div>
@@ -219,8 +414,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
