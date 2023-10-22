@@ -102,4 +102,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo:
+  	# 需要替换为自己仓库的链接，根据https或ssh方式不同自由选择，我已经上传了公钥，所以选择ssh
+    github: https://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@github.com/cyanar/cyanar.github.io.git
+  # 此处似乎只能选择master，配置为main时，实际还是会部署到master分支
+  branch: hexo
