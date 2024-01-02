@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="工具," />
 
 
 
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="npm link 或 yarn linknpm link 或 yarn link 实际上在全局包路径（Global Path）下创建一个软连接(Symlinked)指向你的 npm 包然后在业务工程里通过软链接，将全局的软链接指向到 node_modules&#x2F;[package]这个往往也是需要两个步骤">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2018/08/12/hello-world/index.html">
+<meta property="og:title" content="Yalc-好用的本地包管理工具">
+<meta property="og:url" content="http://example.com/2024/01/02/Yalc-%E5%A5%BD%E7%94%A8%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="CC&#39;s Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="npm link 或 yarn linknpm link 或 yarn link 实际上在全局包路径（Global Path）下创建一个软连接(Symlinked)指向你的 npm 包然后在业务工程里通过软链接，将全局的软链接指向到 node_modules&#x2F;[package]这个往往也是需要两个步骤">
 <meta property="og:locale">
-<meta property="article:published_time" content="2018-08-12T06:16:12.000Z">
-<meta property="article:modified_time" content="2023-11-10T05:13:57.402Z">
+<meta property="article:published_time" content="2024-01-02T02:51:22.000Z">
+<meta property="article:modified_time" content="2024-01-02T03:09:44.977Z">
 <meta property="article:author" content="Circeg">
+<meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2018/08/12/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2024/01/02/Yalc-好用的本地包管理工具/"/>
 
 
 
 
 
-  <title>Hello World | CC's Blog</title>
+  <title>Yalc-好用的本地包管理工具 | CC's Blog</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2018/08/12/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/02/Yalc-%E5%A5%BD%E7%94%A8%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Yalc-好用的本地包管理工具</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-12T14:16:12+08:00">
-                2018-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-02T10:51:22+08:00">
+                2024-01-02
               </time>
             
 
@@ -329,19 +330,39 @@
       
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h3 id="npm-link-或-yarn-link"><a href="#npm-link-或-yarn-link" class="headerlink" title="npm link 或 yarn link"></a>npm link 或 yarn link</h3><p>npm link 或 yarn link 实际上在全局包路径（Global Path）下创建一个软连接(Symlinked)指向你的 npm 包<br>然后在业务工程里通过软链接，将全局的软链接指向到 node_modules&#x2F;[package]<br>这个往往也是需要两个步骤</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在需要生成软链接库下执行 npm link，在业务工程下执行npm link [package]</li>
+<li>在需要生成软链接库下执行 yarn link，在业务工程下执行yarn link [package]</li>
+</ul>
+<p><strong>此方案缺点：</strong><br>影响node_modules中原本的依赖包;<br>软链接和文件系统引发的其他各种奇怪的问题； </p>
+<h3 id="相对路径或者绝对路径使用"><a href="#相对路径或者绝对路径使用" class="headerlink" title="相对路径或者绝对路径使用"></a>相对路径或者绝对路径使用</h3><p>比起 npm link，我们还尝试过使用相对路径或者绝对路径进行引用。<br>将业务代码中的 import 和require所用到的地址，从在 node_modules 里检索改为真实的物理地址。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Button &#125; from &#x27;good-ui&#x27; </span><br></pre></td></tr></table></figure>
+<p>为了调试，强行改成了绝对或者相对路径 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; Button &#125; from &#x27;C:/codes/good-ui/dist&#x27;</span><br></pre></td></tr></table></figure>
+<p><strong>此方案缺点：</strong><br>需要频繁改业务代码，这既麻烦又危险（路径有可能进行修改，在 git 提交代码的时候，引用路径忘记修正回来则其他开发者无法正常使用）。</p>
+<h3 id="为什么要用-yalc"><a href="#为什么要用-yalc" class="headerlink" title="为什么要用 yalc"></a>为什么要用 yalc</h3><p>yalc 可以在本地将 npm 包模拟发布，将发布后的资源存放在一个全局存储中。然后可以通过 yalc 将包添加进需要引用的项目中。<br>这时候 package.json 的依赖表中会多出一个 file:.yalc&#x2F;… 的依赖包，这就是 yalc 创建的特殊引用。同时也会在项目根目录创建一个 yalc.lock 确保引用资源的一致性。因此，测试完项目还需要执行删除 yalc 包的操作，才能正常使用。<br>整个过程相对于 npm link 会更加繁琐一些，要经过发包、添加依赖，结束后也需要做清除操作，但也正因此才避免了 npm link 的一些问题。<br>传统 npm link 依赖表如果出现 N 个依赖，则在使用 npm link 包的时候，需要一个个的去安装，而对于 yalc 来说无需一个个去安装依赖，在项目目录下直接进行 npm install 即可。</p>
+<h3 id="yalc常用命令"><a href="#yalc常用命令" class="headerlink" title="yalc常用命令"></a>yalc常用命令</h3><p>全局安装yalc:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i yalc -g 或</span><br><span class="line">yarn global add yalc</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>在插件包[package]目录下执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yalc publish</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>在项目目录下执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yalc add package</span><br></pre></td></tr></table></figure>
+
+<p>如果你修改了插件包里的一些代码，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn lib &amp;&amp; yalc push—会触发 HMR</span><br></pre></td></tr></table></figure>
+
+<p>移除依赖-在项目目录下执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yalc remove package</span><br></pre></td></tr></table></figure>
+
+<p>其他用法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yalc update package # 更新依赖</span><br><span class="line">yalc remove --all # 移除当前包里的全部yalc依赖</span><br></pre></td></tr></table></figure>
+<p>。。。</p>
 
       
     </div>
@@ -357,6 +378,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          
+        </div>
+      
 
       
       
@@ -366,15 +393,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2023/12/06/git-fork-%E5%90%8C%E6%AD%A5/" rel="next" title="git fork 同步">
+                <i class="fa fa-chevron-left"></i> git fork 同步
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/12/plum%E9%9D%99%E7%94%B5%E5%AE%B9%E9%94%AE%E7%9B%9866%E9%94%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/" rel="prev" title="plum静电容键盘66键说明书">
-                plum静电容键盘66键说明书 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,7 +538,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-link-%E6%88%96-yarn-link"><span class="nav-number">1.</span> <span class="nav-text">npm link 或 yarn link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%88%96%E8%80%85%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">相对路径或者绝对路径使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8-yalc"><span class="nav-number">3.</span> <span class="nav-text">为什么要用 yalc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yalc%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">yalc常用命令</span></a></li></ol></div>
             
 
           </div>
