@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="提交代码流程 从 master 分支开出新分支 feature&#x2F;example：git checkout -b feature&#x2F;example 将此feature分支推送到远端： git push –set-upstream origin feature&#x2F;example 查看此分支git状态：git status">
+<meta name="description" content="git commit emoji12git commit -m &amp;#x27;:tada: init commit&amp;#x27;git commit -m &amp;#x27;added image to repo :art:&amp;#x27;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令总结">
-<meta property="og:url" content="http://example.com/2023/11/09/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:title" content="git commit  emoji">
+<meta property="og:url" content="http://example.com/2024/01/02/git-commit-emoji/index.html">
 <meta property="og:site_name" content="CC&#39;s Blog">
-<meta property="og:description" content="提交代码流程 从 master 分支开出新分支 feature&#x2F;example：git checkout -b feature&#x2F;example 将此feature分支推送到远端： git push –set-upstream origin feature&#x2F;example 查看此分支git状态：git status">
+<meta property="og:description" content="git commit emoji12git commit -m &amp;#x27;:tada: init commit&amp;#x27;git commit -m &amp;#x27;added image to repo :art:&amp;#x27;">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-11-09T06:17:53.000Z">
-<meta property="article:modified_time" content="2023-12-06T02:18:28.204Z">
+<meta property="og:image" content="https://gcc-pic.oss-cn-hangzhou.aliyuncs.com/my-blog-pics/vscode.png">
+<meta property="article:published_time" content="2024-01-02T05:51:21.000Z">
+<meta property="article:modified_time" content="2024-01-02T05:57:34.133Z">
 <meta property="article:author" content="Circeg">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gcc-pic.oss-cn-hangzhou.aliyuncs.com/my-blog-pics/vscode.png">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2023/11/09/git常用命令总结/"/>
+  <link rel="canonical" href="http://example.com/2024/01/02/git-commit-emoji/"/>
 
 
 
 
 
-  <title>git常用命令总结 | CC's Blog</title>
+  <title>git commit  emoji | CC's Blog</title>
   
 
 
@@ -263,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/09/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/01/02/git-commit-emoji/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git常用命令总结</h1>
+          <h1 class="post-title" itemprop="name headline">git commit  emoji</h1>
         
 
         <div class="post-meta">
@@ -292,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-11-09T14:17:53+08:00">
-                2023-11-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-02T13:51:21+08:00">
+                2024-01-02
               </time>
             
 
@@ -330,42 +332,14 @@
       
 
       
-        <h3 id="提交代码流程"><a href="#提交代码流程" class="headerlink" title="提交代码流程"></a>提交代码流程</h3><ol>
-<li>从 master 分支开出新分支 feature&#x2F;example：<strong>git checkout -b feature&#x2F;example</strong></li>
-<li>将此feature分支推送到远端： <strong>git push –set-upstream origin feature&#x2F;example</strong></li>
-<li>查看此分支git状态：<strong>git status</strong><span id="more"></span></li>
-<li>查看分支改动的详细代码：<strong>git diff</strong></li>
-<li>将改动文件从工作区添加到暂存区：<strong>git add .</strong></li>
-<li>将改动文件从暂存区提交到当前分支：<strong>git commit -m ‘xxx’</strong></li>
-<li>5和6两步可以合写为： <strong>git commit -am ‘xxx’</strong></li>
-<li>将分支改动推送到远端：<strong>git push</strong></li>
-<li>将分支发到测试环境：先切到测试分支develop, 比较分支的文件差异 – <strong>git diff feature&#x2F;example</strong>( <em>审查代码 防止出错</em> ) 再合并：<strong>git merge feature&#x2F;example –no-ff</strong> 最后再 <strong>git push</strong> 推送到远端</li>
-<li>分支发到预发或线上环境同上</li>
-</ol>
-<h3 id="撤回相关"><a href="#撤回相关" class="headerlink" title="撤回相关"></a>撤回相关</h3><ol start="11">
-<li>5步添加之前想撤销所有提交：<strong>git checkout .</strong></li>
-<li>5步添加之后想要撤销提交：<strong>git reset .</strong></li>
-<li>6步commit之后想撤回：<strong>先 git reset HEAD~1</strong> 然后 强推到远端 <strong>git push origin feature&#x2F;example –force</strong></li>
-<li>想撤销某个版本commit：<strong>git revert -m 1 版本号</strong> <a target="_blank" rel="noopener" href="https://blog.justwe.site/post/git-revert/">参考：记一次git revert的经历</a></li>
-<li>merge到dev分支之后想撤回合并：先切到dev分支：<strong>git checkout develop</strong>, 查处要回退的版本号：<strong>git log或者git reflog</strong>, 然后 <strong>git reset –mixed 版本号</strong>  最后把reset改动推送到远端：<strong>git push origin dev&#x2F;master -f</strong><font color="red">(注意区分reset和revert的区别，reset会撤销此分支版本号x之后的所有commit，而revert会撤销仅仅此版本号的commit并作为一个新的commit)</font></li>
-<li>reset后 后悔怎么办： <strong>git reflog</strong>查看reset操作之前的版本号mm，然后再次<strong>git reset –mixed mm</strong></li>
-</ol>
-<h3 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h3><ul>
-<li>查看：<strong>git tag</strong></li>
-<li>提交：<strong>git tag -a v0.0.1 -m ‘project init’<strong>，然后</strong>git push origin v0.0.1</strong></li>
-</ul>
-<h3 id="remote"><a href="#remote" class="headerlink" title="remote"></a>remote</h3><ul>
-<li>查询当前origin: <strong>git remote -v</strong></li>
-<li>删除当前origin: <strong>git remote remove origin</strong></li>
-<li>添加origin: <strong>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/username/reponame.git">https://github.com/username/reponame.git</a></strong></li>
-<li>修改当前origin: <strong>git remote set-url origin <a target="_blank" rel="noopener" href="https://github.com/username/reponame.git">https://github.com/username/reponame.git</a></strong></li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
-<li>查看所有分支：<strong>git branch -a</strong></li>
-<li>删除本地分支：<strong>git branch -d feature&#x2F;example</strong></li>
-<li>删除远程分支：第一步：<strong>git branch -r -d origin&#x2F;feature&#x2F;example</strong>  第二步：<strong>git push origin :feature&#x2F;example</strong></li>
-<li>查看命令树：<strong>git log –oneline –graph –decorate –all</strong></li>
-<li>rebase: <a target="_blank" rel="noopener" href="http://gitbook.liuhui998.com/4_2.html">rebase</a></li>
+        <h3 id="git-commit-emoji"><a href="#git-commit-emoji" class="headerlink" title="git commit emoji"></a>git commit emoji</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;:tada: init commit&#x27;</span><br><span class="line">git commit -m &#x27;added image to repo :art:&#x27;</span><br></pre></td></tr></table></figure>
+
+
+<span id="more"></span>
+
+<h3 id="emoji-列表"><a href="#emoji-列表" class="headerlink" title="emoji 列表"></a>emoji 列表</h3><p>emoji	emoji 代码	commit 说明	Eng<br>🎨 (调色板)	:art:	改进代码结构&#x2F;代码格式	Improve structure &#x2F; format of the code.<br>⚡️ (闪电)🐎 (赛马)	:zap: :racehorse:	提升性能	Improve performance<br>🔥 (火焰)	:fire:	移除代码或文件	Remove code or files<br>🐛 (bug)	:bug:	修复 bug	Fix a bug<br>🚑 (急救车)	:ambulance:	重要补丁，紧急修复	Critical hotfix<br>✨ (火花)	:sparkles:	引入新功能	Introduce new features<br>📝 (备忘录)	:memo:	撰写文档	Add or update doc<br>🚀 (火箭)	:rocket:	部署功能	Deploy stuff<br>💄 (口红)	:lipstick:	更新 UI 和样式文件	Add or update the UI and style files<br>🎉 (庆祝)	:tada:	初次提交， 开始一个项目	Begin a project<br>🎬 (场记板)	:clapper:	更新演示&#x2F;示例	<br>✅ (白色复选框)	:white_check_mark:	增加&#x2F;更新测试用例	Add, update, or pass tests<br>🔒 (锁)	:lock:	修复安全问题	Fix security issues<br>🍎 (苹果)	:apple:	修复 macOS 下的问题	<br>🐧 (企鹅)	:penguin:	修复 Linux 下的问题	<br>🏁 (旗帜)	:checkered_flag:	修复 Windows 下的问题	<br>🔖 (书签)	:bookmark:	发行&#x2F;版本标签	Release &#x2F; Version tags<br>🚨 (警车灯)	:rotating_light:	移除 linter 警告	<br>🚧 (施工)	:construction:	工作进行中	Work in progress<br>💚 (绿心)	:green_heart:	修复 CI 构建问题	<br>⬇️ (下降箭头)	:arrow_down:	降级依赖	Downgrade dependencies<br>⬆️ (上升箭头)	:arrow_up:	升级依赖	Upgrade dependencies<br>👷 (工人)	:construction_worker:	添加 CI 构建系统	<br>📈 (上升趋势图)	:chart_with_upwards_trend:	添加分析或跟踪代码	Add or update analytics or track code<br>🔨 (锤子)	:hammer:	重大重构， 增加&#x2F;更新开发脚本	Add or update development scripts<br>➖ (减号)	:heavy_minus_sign:	减少一个依赖	Remove a dependency.<br>🐳 (鲸鱼)	:whale:	Docker 相关工作	<br>➕ (加号)	:heavy_plus_sign:	增加一个依赖	Add a dependency<br>🔧 (扳手)	:wrench:	增加&#x2F;更新配置文件	Add or update configuration files<br>🌐 (地球)	:globe_with_meridians:	国际化与本地化	<br>✏️ (铅笔)	:pencil2:	修复 typo，修改错别字	Fix typos<br>💡（灯泡）	:bulb:	增加&#x2F;更新源代码中的注释	Add or update comments in source code<br>🚚 (卡车)	:truck:	移动&#x2F;重命名文件&#x2F;路径	Move or rename resources (e.g.: files, paths, routes)<br>⏪ (返回箭头)	:rewind:	回退	Revert changes<br>🔀 (交叉箭头)	:twisted_rightwards_arrows:	合并分支	Merge branches<br>📦 (包裹)	:package:	增加&#x2F;更新编译后文件&#x2F;包	Add or update compiled files or packages<br>🙈 (魔眼无踪)	:see_no_evil:	增加&#x2F;更新.gitignore文件	Add or update a .gitignore file<br>📄 (页面)	:page_facing_up:	增加&#x2F;更新LICENSE	Add or update license<br>🔊 (喇叭)	:loud_sound:	增加&#x2F;更新日志	Add or update logs<br>🔇 (禁止发声)	:mute:	移除日志	Remove logs<br>👥 (半身剪影)	:busts_in_silhouette:	增加&#x2F;更新贡献者	Add or update contributor(s)<br>♻️ (循环)	:recycle:	重构代码	 Refactor code<br>🚸 (孩童通过)	:children_crossing:	增强用户体验&#x2F;可用性	Improve user experience &#x2F; usability<br>🛂 (护照控制)	:passport_control:	处理与授权、身份和权限相关的代码	Work on code related to authorization, roles and permissions<br>📌 (图钉)	:pushpin:	固定依赖到特定版本	Pin dependencies to specific versions<br>👽 (外星人)	:alien:	由于外部API更改而更新代码	Update code due to external API changes<br>🔖 (书签)	:bookmark:	发布&#x2F;版本标签	Release tag<br>🔍 (镁光)	:mag:	提高SEO	Improve SEO<br>🥅 (球网)	:goal_net:	捕捉错误	Catch errors<br>🗑 (垃圾桶)	:wastebasket:	废弃代码,需要清理	Deprecate code that needs to be cleaned up<br>⚰️ (棺椁)	:coffin:	移除无用代码	Remove dead code<br>🏷 (标签)	:label:	增加&#x2F;更新类型	Add or update types<br>💫 (晕眩)	:dizzy:	增加&#x2F;更新动画和过渡	Add or update animations and transitions<br>🚩 (三角旗帜)	:triangular_flag_on_post:	增加&#x2F;更新&#x2F;移除功能标识	Add, update, or remove feature flags<br>👔 (领带)	:necktie:	增加&#x2F;更新业务逻辑	Add or update business logic<br>🍱 (便当)	:bento:	增加&#x2F;更新assets	Add or update assets<br>🌱 (种子)	:seedling:	增加&#x2F;更新种子文件	Add or update seed files<br>📸 (快照)	:camera_flash:	增加&#x2F;更新快照	Add or update snapshots<br>👷 (建筑工人)	:construction_worker:	增加&#x2F;更新CI构建系统	Add or update CI build system<br>💚 (绿色心形)	:green_heart:	修复CI构建系统	Fix CI Build<br>💩 (排泄物)	:poop:	代码很烂需要改进	Write bad code that needs to be improved<br>🚨 (旋转灯标)	:rotating_light:	修复compiler&#x2F;linter的警告	Fix compiler &#x2F; linter warnings<br>♿️ (轮椅)	:wheelchair:	改善可访问性	Improve accessibility<br>⚗️ (蒸馏器)	:alembic:	进行实验	Perform experiments<br>💥 (爆炸)	:boom:	引入破坏性改变	Introduce breaking changes<br>🗃 (文件箱)	:card_file_box:	执行数据库相关的改变	Perform database related changes<br>🏗 (建筑结构)	:building_construction:	执行架构层次的改变	Make architectural changes<br>🩹 (创可贴)	:adhesive_bandage:	非关键问题的简单修复	<br>🧐 (单片眼镜)	:monocle_face:	数据探查&#x2F;检查	Data exploration&#x2F;inspection<br>🌐 (地球)	:globe_with_meridians:	国际化与本地化	Internationalization and localization<br>🍻 (啤酒)	:beers:	醉酒写码	Write code drunkenly<br>💬 (对话框)	:speech_balloon:	增加&#x2F;更新文本和文字	Add or update text and literals<br>📱 (iphone)	:iphone:	致力于响应式设计	Work on responsive design.<br>🥚 (蛋)	:egg:	增加&#x2F;更新复活节蛋	Add or update an easter egg<br>🤡 (小丑)	:clown_face:	嘲笑	Mock things</p>
+<h3 id="vscode扩展插件推荐"><a href="#vscode扩展插件推荐" class="headerlink" title="vscode扩展插件推荐"></a>vscode扩展插件推荐</h3><ul>
+<li>Gitmoji Commit<br><img src="https://gcc-pic.oss-cn-hangzhou.aliyuncs.com/my-blog-pics/vscode.png" alt="vscode"></li>
 </ul>
 
       
@@ -397,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/12/plum%E9%9D%99%E7%94%B5%E5%AE%B9%E9%94%AE%E7%9B%9866%E9%94%AE%E8%AF%B4%E6%98%8E%E4%B9%A6/" rel="next" title="plum静电容键盘66键说明书">
-                <i class="fa fa-chevron-left"></i> plum静电容键盘66键说明书
+              <a href="/2024/01/02/numeral-%E6%95%B0%E5%80%BC%E6%A0%A1%E9%AA%8C/" rel="next" title="numeral-数值校验">
+                <i class="fa fa-chevron-left"></i> numeral-数值校验
               </a>
             
           </div>
@@ -407,8 +381,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2023/12/06/git-fork-%E5%90%8C%E6%AD%A5/" rel="prev" title="git fork 同步">
-                git fork 同步 <i class="fa fa-chevron-right"></i>
+              <a href="/2024/01/02/%E9%82%AE%E7%AE%B1html%E6%A8%A1%E6%9D%BF%E7%BC%96%E5%86%99%E6%8C%87%E5%8D%97/" rel="prev" title="邮箱html模板编写指南">
+                邮箱html模板编写指南 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -546,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">提交代码流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%92%A4%E5%9B%9E%E7%9B%B8%E5%85%B3"><span class="nav-number">2.</span> <span class="nav-text">撤回相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tag"><span class="nav-number">3.</span> <span class="nav-text">tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#remote"><span class="nav-number">4.</span> <span class="nav-text">remote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit-emoji"><span class="nav-number">1.</span> <span class="nav-text">git commit emoji</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#emoji-%E5%88%97%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">emoji 列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vscode%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="nav-number">3.</span> <span class="nav-text">vscode扩展插件推荐</span></a></li></ol></div>
             
 
           </div>
